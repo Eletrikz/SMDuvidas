@@ -1,0 +1,35 @@
+<%- include('./partials/header.ejs') %>
+
+    <body id="page-top" class="escolha">
+
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <%- include('./partials/navbar.ejs') %>
+
+                <!-- Content Wrapper -->
+                <div class="d-flex flex-column content-wrapper justify-content-center">
+
+                    <!-- Main Content -->
+                    <div id="content" class="margem">
+
+                        <!-- Topbar -->
+                        <!-- <nav class="navbar navbar-expand navbar-light"> -->
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <!-- <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                                <i class="fa fa-ellipsis-v"></i>
+                            </button>
+                        </nav> -->
+                        <!-- End of Topbar -->
+
+                        <h1 style="font-size: 48px;" class="ml-5 mb-4 text-amarelo">Faça o upload do seu histórico</h1>
+                        <form action="/upload/upload" method="post" enctype="multipart/form-data" class="ml-5 mt-5">
+                            <input type="file" name="file"><br><br>
+
+                            <input type="submit" value="Enviar" class="botao-formulario botao-formulario-cor">
+                        </form>
+                    </div>
+                </div>
+        </div>
+
+        <%- include('./partials/footer.ejs') %>

@@ -1,0 +1,422 @@
+<%- include('./partials/header.ejs') %>
+
+    <body id="page-top" class="escolha">
+
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <ul class="navbar-nav cor-menu menu-fixo sidebar toggled accordion align-items-center justify-content-center" id="accordionSidebar">
+
+                <li class="nav-item" style="position: absolute; height: 700px;">
+                    <a class="nav-link" href="/">
+                        <img src="images/icon/logo.svg" alt="">
+                    </a>
+                </li>
+
+                <!-- Nav Item - Dashboard -->
+                <li class="nav-item">
+                    <a class="nav-link cor-font-menu" href="/escolhaProgresso">
+                        <img src="images/icon/icone-progresso.svg" alt=""> Progresso
+                    </a>
+                </li>
+
+                <!-- Nav Item - Utilities Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link cor-font-menu" href="/complementar">
+                        <img src="images/icon/icone-horas.svg" alt=""> Horas
+                    </a>
+                </li>
+
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link cor-font-menu" href="/trilhas">
+                        <img src="images/icon/icone-trilhas.svg"> Trilhas
+                    </a>
+                </li>
+
+            </ul>
+            <!-- End of Sidebar -->
+
+            <!-- Content Wrapper -->
+            <div class="d-flex flex-column content-wrapper align-items-center justify-content-center">
+
+                <!-- Main Content -->
+                <div id="content" class="margem margem-relatorio">
+
+                    <div id="formulario" style="padding-top: 20px; background-color: #1E2746; border: 0; border-radius: 15px;" class="sombra-card">
+                        <div class="margem" id="semestre">
+                            <label for="semestre" class="h2">Selecione o seu semestre atual:</label>
+                            <select name="semestre" id="selecSemestre">
+                                    <option hidden>Semestre</option>
+                                    <option value="1">1º semestre</option>
+                                    <option value="2">2º semestre</option>
+                                    <option value="3">3º semestre</option>
+                                    <option value="4">4º semestre</option>
+                                    <option value="5">5º semestre</option>
+                                    <option value="6">6º semestre</option>
+                                    <option value="7">7º semestre</option>
+                                    <option value="8">8º semestre</option>
+                                    <option value="9">+ 8º semestre</option>
+                                </select>
+                        </div>
+
+                        <!-- Formulário -->
+                        <div class="margem" id="formulario">
+                            <h2 class="mb-4">Disciplinas obrigatórias e eletivas que você já cursou. Desmarque caso não tenha cursado ainda.</h2>
+
+                            <form action="/upload/uploadManual" method="post" id="formSelect">
+
+                                <div class="accordion" id="accordionExample">
+
+                                    <div class="card" style="border: 0;">
+                                        <div class="card-header cor" id="headingOne" style="border: 0; border-radius: 8px;">
+                                            <h2 class="mb-0">
+                                                <button class="btn font-weight-bold botao-formulario-header" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">1º semestre</button>
+                                            </h2>
+                                        </div>
+
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body flex-formulario" id="semestre1">
+
+                                                <% disciplinas.forEach(disciplina => { %>
+
+                                                    <% if(disciplina.semestre == 1) { %>
+
+                                                        <div class="padding-botao">
+                                                            <input type="checkbox" class="btn-check" id=<%=disciplina.codigo %> name="disciplinasObrigatorias1" autocomplete="off">
+                                                            <label class="botao-formulario botao-formulario-cor" for=<%=disciplina.codigo %>> <%= disciplina.codigo + ' - ' + disciplina.nome %> </label>
+                                                        </div>
+
+                                                        <% } %>
+
+                                                            <% }) %>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="card" style="border: 0;">
+                                        <div class="card-header cor" id="headingTwo" style="border: 0; border-radius: 8px;">
+                                            <h2 class="mb-0">
+                                                <button class="btn font-weight-bold botao-formulario-header" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">2º semestre</button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                            <div class="card-body flex-formulario" id="semestre2">
+
+                                                <% disciplinas.forEach(disciplina => { %>
+
+                                                    <% if(disciplina.semestre == 2) { %>
+
+                                                        <div class="padding-botao">
+                                                            <input type="checkbox" class="btn-check" id=<%=disciplina.codigo %> name="disciplinasObrigatorias2" autocomplete="off">
+                                                            <label class="botao-formulario botao-formulario-cor" for=<%=disciplina.codigo %>> <%= disciplina.codigo + ' - ' + disciplina.nome %> </label>
+                                                        </div>
+
+                                                        <% } %>
+
+                                                            <% }) %>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="card" style="border: 0;">
+                                        <div class="card-header cor" id="headingThree" style="border: 0; border-radius: 8px;">
+                                            <h2 class="mb-0">
+                                                <button class="btn font-weight-bold botao-formulario-header" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">3º semestre</button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseThree" class="collapse show" style="background-color: transparent;" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                            <div class="card-body flex-formulario" id="semestre3">
+
+                                                <% disciplinas.forEach(disciplina => { %>
+
+                                                    <% if(disciplina.semestre == 3) { %>
+
+                                                        <div class="padding-botao">
+                                                            <input type="checkbox" class="btn-check" id=<%=disciplina.codigo %> name="disciplinasObrigatorias3" autocomplete="off">
+                                                            <label class="botao-formulario botao-formulario-cor" for=<%=disciplina.codigo %>> <%= disciplina.codigo + ' - ' + disciplina.nome %> </label>
+                                                        </div>
+
+                                                        <% } %>
+
+                                                            <% }) %>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="card" style="border: 0;">
+                                        <div class="card-header cor" id="headingFour" style="border: 0; border-radius: 8px;">
+                                            <h2 class="mb-0">
+                                                <button class="btn font-weight-bold botao-formulario-header" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">4º semestre</button>
+                                            </h2>
+                                        </div>
+
+                                        <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                            <div class="card-body flex-formulario" id="semestre4">
+
+                                                <% disciplinas.forEach(disciplina => { %>
+
+                                                    <% if(disciplina.semestre == 4) { %>
+
+                                                        <div class="padding-botao">
+                                                            <input type="checkbox" class="btn-check" id=<%=disciplina.codigo %> name="disciplinasObrigatorias4" autocomplete="off">
+                                                            <label class="botao-formulario botao-formulario-cor" for=<%=disciplina.codigo %>> <%= disciplina.codigo + ' - ' + disciplina.nome %> </label>
+                                                        </div>
+
+                                                        <% } %>
+
+                                                            <% }) %>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                    <div class="card" style="border: 0;">
+                                        <div class="card-header cor" id="headingFive" style="border: 0; border-radius: 8px;">
+                                            <h2 class="mb-0">
+                                                <button class="btn font-weight-bold botao-formulario-header" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">5º semestre</button>
+                                            </h2>
+                                        </div>
+
+                                        <div id="collapseFive" class="collapse show" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                            <div class="card-body flex-formulario" id="semestre5">
+
+                                                <% disciplinas.forEach(disciplina => { %>
+
+                                                    <% if(disciplina.semestre == 5) { %>
+
+                                                        <div class="padding-botao">
+                                                            <input type="checkbox" class="btn-check" id=<%=disciplina.codigo %> name="disciplinasObrigatorias5" autocomplete="off">
+                                                            <label class="botao-formulario botao-formulario-cor" for=<%=disciplina.codigo %>> <%= disciplina.codigo + ' - ' + disciplina.nome %> </label>
+                                                        </div>
+
+                                                        <% } %>
+
+                                                            <% }) %>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="card" style="border: 0;">
+                                        <div class="card-header cor" id="headingSix" style="border: 0; border-radius: 8px;">
+                                            <h2 class="mb-0">
+                                                <button class="btn font-weight-bold botao-formulario-header" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">6º semestre</button>
+                                            </h2>
+                                        </div>
+
+                                        <div id="collapseSix" class="collapse show" aria-labelledby="headingSix" data-parent="#accordionExample">
+                                            <div class="card-body flex-formulario" id="semestre6">
+
+                                                <% disciplinas.forEach(disciplina => { %>
+
+                                                    <% if(disciplina.semestre == 6) { %>
+
+                                                        <div class="padding-botao">
+                                                            <input type="checkbox" class="btn-check" id=<%=disciplina.codigo %> name="disciplinasObrigatorias6" autocomplete="off">
+                                                            <label class="botao-formulario botao-formulario-cor" for=<%=disciplina.codigo %>> <%= disciplina.codigo + ' - ' + disciplina.nome %> </label>
+                                                        </div>
+
+                                                        <% } %>
+
+                                                            <% }) %>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="card" style="border: 0;">
+                                        <div class="card-header cor" id="headingSeven" style="border: 0; border-radius: 8px;">
+                                            <h2 class="mb-0">
+                                                <button class="btn font-weight-bold botao-formulario-header" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">7º semestre</button>
+                                            </h2>
+                                        </div>
+
+                                        <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                                            <div class="card-body flex-formulario" id="semestre7">
+
+                                                <% disciplinas.forEach(disciplina => { %>
+
+                                                    <% if(disciplina.semestre == 7) { %>
+
+                                                        <div class="padding-botao">
+                                                            <input type="checkbox" class="btn-check" id=<%=disciplina.codigo %> name="disciplinasObrigatorias7" autocomplete="off">
+                                                            <label class="botao-formulario botao-formulario-cor" for=<%=disciplina.codigo %>> <%= disciplina.codigo + ' - ' + disciplina.nome %> </label>
+                                                        </div>
+
+                                                        <% } %>
+
+                                                            <% }) %>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="card" style="border: 0;">
+                                        <div class="card-header cor" id="headingEight" style="border: 0; border-radius: 8px;">
+                                            <h2 class="mb-0">
+                                                <button class="btn font-weight-bold botao-formulario-header" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">8º semestre</button>
+                                            </h2>
+                                        </div>
+
+                                        <div id="collapseEight" class="collapse show" aria-labelledby="headingEight" data-parent="#accordionExample">
+                                            <div class="card-body flex-formulario" id="semestre8">
+
+                                                <% disciplinas.forEach(disciplina => { %>
+
+                                                    <% if(disciplina.semestre == 8 && disciplina.tipo == 1) { %>
+
+                                                        <div class="padding-botao">
+                                                            <input type="checkbox" class="btn-check" id=<%=disciplina.codigo %> name="disciplinasObrigatorias8" autocomplete="off">
+                                                            <label class="botao-formulario botao-formulario-cor" for=<%=disciplina.codigo %>> <%= disciplina.codigo + ' - ' + disciplina.nome %> </label>
+                                                        </div>
+
+                                                        <% } %>
+
+                                                            <% }) %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion" id="accordionExample2">
+                                    <h2>Marque as disciplinas optativas que já cursou.</h2><br>
+                                    <div class="card mb-2" style="border: 0;">
+                                        <div class="card-header cor" id="headingOne2" style="border: 0; border-radius: 8px;">
+                                            <h2 class="mb-0">
+                                                <button class="btn collapsed font-weight-bold botao-formulario-header" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseOne2" aria-expanded="false" aria-controls="collapseOne2">Programação</button>
+                                            </h2>
+                                        </div>
+
+                                        <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2" data-parent="#accordionExample2">
+                                            <div class="card-body flex-formulario">
+
+                                                <% disciplinas.forEach(disciplina => { %>
+
+                                                    <% if(disciplina.semestre == 8 && disciplina.tipo == 2 && disciplina.area == 1) { %>
+
+                                                        <div class="padding-botao">
+                                                            <input type="checkbox" class="btn-check" id=<%=disciplina.codigo %> name="disciplinasOptativas" autocomplete="off">
+                                                            <label class="botao-formulario botao-formulario-cor" for=<%=disciplina.codigo %>> <%= disciplina.codigo + ' - ' + disciplina.nome %> </label>
+                                                        </div>
+
+                                                        <% } %>
+
+                                                            <% }) %>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="card mb-2" style="border: 0;">
+                                        <div class="card-header cor" id="headingOne2" style="border: 0; border-radius: 8px;">
+                                            <h2 class="mb-0">
+                                                <button class="btn collapsed font-weight-bold botao-formulario-header" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">Design</button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordionExample2">
+                                            <div class="card-body flex-formulario">
+
+                                                <% disciplinas.forEach(disciplina => { %>
+
+                                                    <% if(disciplina.semestre == 8 && disciplina.tipo == 2 && disciplina.area == 2) { %>
+
+                                                        <div class="padding-botao">
+                                                            <input type="checkbox" class="btn-check" id=<%=disciplina.codigo %> name="disciplinasOptativas" autocomplete="off">
+                                                            <label class="botao-formulario botao-formulario-cor" for=<%=disciplina.codigo %>> <%= disciplina.codigo + ' - ' + disciplina.nome %> </label>
+                                                        </div>
+
+                                                        <% } %>
+
+                                                            <% }) %>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="card mb-2" style="border: 0;">
+                                        <div class="card-header cor" id="headingOne2" style="border: 0; border-radius: 8px;">
+                                            <h2 class="mb-0">
+                                                <button class="btn collapsed font-weight-bold botao-formulario-header" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">Audiovisual</button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2" data-parent="#accordionExample2">
+                                            <div class="card-body flex-formulario">
+
+                                                <% disciplinas.forEach(disciplina => { %>
+
+                                                    <% if(disciplina.semestre == 8 && disciplina.tipo == 2 && disciplina.area == 3) { %>
+
+                                                        <div class="padding-botao">
+                                                            <input type="checkbox" class="btn-check" id=<%=disciplina.codigo %> name="disciplinasOptativas" autocomplete="off">
+                                                            <label class="botao-formulario botao-formulario-cor" for=<%=disciplina.codigo %>> <%= disciplina.codigo + ' - ' + disciplina.nome %> </label>
+                                                        </div>
+
+                                                        <% } %>
+
+                                                            <% }) %>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="card" style="border: 0;">
+                                        <div class="card-header cor" id="headingOne2" style="border: 0; border-radius: 8px;">
+                                            <h2 class="mb-0">
+                                                <button class="btn collapsed font-weight-bold botao-formulario-header" style="color: #FFF;" type="button" data-toggle="collapse" data-target="#collapseFour2" aria-expanded="false" aria-controls="collapseFour2">Outros</button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseFour2" class="collapse" aria-labelledby="headingFour2" data-parent="#accordionExample2">
+                                            <div class="card-body flex-formulario">
+
+                                                <% disciplinas.forEach(disciplina => { %>
+
+                                                    <% if(disciplina.semestre == 8 && disciplina.tipo == 2 && disciplina.area == 4) { %>
+
+                                                        <div class="padding-botao">
+                                                            <input type="checkbox" class="btn-check" id=<%=disciplina.codigo %> name="disciplinasOptativas" autocomplete="off">
+                                                            <label class="botao-formulario botao-formulario-cor" for=<%=disciplina.codigo %>> <%= disciplina.codigo + ' - ' + disciplina.nome %> </label>
+                                                        </div>
+
+                                                        <% } %>
+
+                                                            <% }) %>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-content-center align-items-center">
+                                    <input type="submit" class="botao mt-4 mb-4" value="Checar progresso">
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <%- include('./partials/footer.ejs') %>

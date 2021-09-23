@@ -1,0 +1,36 @@
+<%- include('./partials/header.ejs') %>
+
+    <body id="page-top" class="escolha">
+
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <%- include('./partials/navbar.ejs') %>
+
+                <!-- Content Wrapper -->
+                <div class="d-flex flex-column content-wrapper align-items-center justify-content-center">
+
+                    <!-- Main Content -->
+                    <div id="content" class="">
+
+                        <h1>Seu Progresso</h1>
+                        <h4>Selecione como deseja ver seu progresso, através do seu<br>histórico escolar ou preenchendo as informações manualmente.</h4><br><br><br>
+
+                        <div class="flex align-items-center">
+                            <a class="botao-escolha cor-botao-escolha" href="/progressoPdf">
+                                <img src="images/icon/icone-pdf.svg" alt="" class="mr-3">Enviar
+                                <div class="text-laranja ml-2">histórico</div>
+                            </a>
+                            <h1 class="margem-botao">ou</h1>
+                            <a class="botao-escolha cor-botao-escolha" href="/progressoManual">
+                                <img src="images/icon/icone-preencher.svg" alt="" class="mr-3">Preencher
+                                <div class="text-amarelo ml-2">manualmente</div>
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+        </div>
+
+        <%- include('./partials/footer.ejs') %>

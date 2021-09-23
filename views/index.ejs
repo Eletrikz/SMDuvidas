@@ -1,0 +1,40 @@
+<%- include('./partials/header.ejs') %>
+
+    <body id="page-top" class="inicial">
+
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <%- include('./partials/navbar.ejs') %>
+
+                <!-- Content Wrapper -->
+                <div class="d-flex flex-column content-wrapper justify-content-center">
+
+                    <!-- Main Content -->
+                    <div id="content" class="margem">
+
+                        <!-- Topbar -->
+                        <!-- <nav class="navbar navbar-expand navbar-light"> -->
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <!-- <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                                <i class="fa fa-ellipsis-v"></i>
+                            </button>
+                        </nav> -->
+                        <!-- End of Topbar -->
+
+                        <h1 style="font-size: 48px;" class="ml-5 mb-4 text-amarelo">Esse sistema foi desenvolvido para você,</h1>
+                        <h4 class="ml-5">que assim como outros alunos, tem dificuldade em encontrar algumas<br>informações sobre o curso.</h4>
+                        <h4 class="ml-5">Aqui você pode: ver seu progresso, verificar as trilhas e entender<br>sobre as atividades/horas complementares.</h4><br>
+                        <div class="ml-5">
+                            <a class="botao" href="/escolhaProgresso" role="button">Progresso</a>
+                            <a class="botao ml-4" href="/complementar" role="button">Atividades Complementares</a>
+                            <a class="botao ml-4" href="/trilhas" role="button">Trilhas</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1%22%3E"></script>
+        <df-messenger intent="WELCOME" chat-title="Tire suas dúvidas" chat-icon="images/icon/icone-bot.svg" agent-id="7a0b11d0-a0c5-4217-8285-0865cd17591b" language-code="pt-br"></df-messenger>
+
+        <%- include('./partials/footer.ejs') %>

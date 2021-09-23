@@ -1,0 +1,12 @@
+{
+  "listaDisciplinas": [
+    5,
+    5,
+    5
+  ],
+  "discAprovadas": 15,
+  "discRestantes": 26,
+  "horasAprovadas": 960,
+  "horasRestantes": 1920,
+  "progresso": 42
+}

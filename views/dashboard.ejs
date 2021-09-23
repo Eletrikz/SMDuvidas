@@ -1,0 +1,203 @@
+<%- include('./partials/header.ejs') %>
+
+    <body id="page-top" class="progresso" onload="<%='graficos(' + json.horasAprovadas + ', ' + json.horasRestantes + ', ' + json.listaDisciplinas + ')' %>">
+
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <%- include('./partials/navbar.ejs') %>
+
+                <!-- Content Wrapper -->
+                <div class="d-flex flex-column content-wrapper">
+
+                    <!-- Main Content -->
+                    <div id="content">
+
+                        <!-- Begin Page Content -->
+                        <div class="container-fluid justify-content-center" id="relatorio">
+
+                            <!-- Page Heading -->
+                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                <h1 class="h3 mb-0">Seu Progresso</h1>
+                                <h1 class="h6 mb-0">Como essa é uma área focada nas disciplinas, já somamos as atividades complementares.</h1>
+                            </div>
+
+                            <!-- Content Row -->
+                            <div class="row">
+
+                                <!-- Area Chart -->
+                                <div class="col-xl-12 col-md-6 mb-2">
+                                    <div class="painel mb-4">
+                                        <!-- Card Header - Dropdown -->
+                                        <div class="painel-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                            <h2 class="m-0">Disciplinas por semestre</h6>
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body">
+                                            <div class="chart-area">
+                                                <canvas id="myAreaChart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row align-items-center">
+                                <!-- Pie Chart -->
+                                <div class="col-xl-6 col-lg-5">
+                                    <div class="painel mb-2">
+                                        <!-- Card Header - Dropdown -->
+                                        <div class="painel-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                            <h2 class="m-0">Horas do curso</h6>
+                                        </div>
+
+
+                                        <!-- Card Body -->
+                                        <div class="card-body" style="display: flex;">
+
+                                            <div class="col-xl-6 col-md-6 mb-4">
+                                                <div class="painel painel-border-left-laranja my-2">
+                                                    <div class="card-body">
+                                                        <div class="row no-gutters align-items-center">
+                                                            <div class="col-auto margin-icone">
+                                                                <img src="images/icon/icone-horasConcluidas.svg" alt="" style="width: 48px;">
+                                                            </div>
+                                                            <div class="col mr-2">
+                                                                <div class="mb-1">
+                                                                    Horas completas</div>
+                                                                <div class="h3 mb-0 text-laranja" id="horasCompletas">
+                                                                    <%= json.horasAprovadas %>h
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="painel painel-border-left-amarelo my-2">
+                                                    <div class="card-body">
+                                                        <div class="row no-gutters align-items-center">
+                                                            <div class="col-auto margin-icone">
+                                                                <img src="images/icon/icone-horasRestantes.svg" alt="" style="width: 48px;">
+                                                            </div>
+                                                            <div class="col mr-2">
+                                                                <div class="mb-1">
+                                                                    Horas restantes</div>
+                                                                <div class="h3 mb-0 text-amarelo" id="horasRestantes">
+                                                                    <%= json.horasRestantes %>h
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="painel painel-border-left-azul my-2">
+                                                    <div class="card-body">
+                                                        <div class="row no-gutters align-items-center">
+                                                            <div class="col-auto margin-icone">
+                                                                <img src="images/icon/icone-horasTotais.svg" alt="" style="width: 48px;">
+                                                            </div>
+                                                            <div class="col mr-2">
+                                                                <div class="mb-1">
+                                                                    Horas totais</div>
+                                                                <div class="h3 mb-0 text-azul">2880h</div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="chart-pie pt-4 pb-2">
+                                                <canvas id="myPieChart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-1"></div>
+
+                                <div class="col-xl-5 col-lg-5">
+                                    <!-- Earnings (Monthly) Card Example -->
+                                    <div class="col-xl-12 col-md-6 mb-4">
+                                        <div class="painel painel-border-left-azul py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col-auto margin-icone">
+                                                        <img src="images/icon/icone-dashConcluida.svg" alt="" style="width: 48px;">
+                                                    </div>
+                                                    <div class="flex align-items-center ">
+                                                        <div class="h3 mb-0 text-azul mx-2 " id="discConluidas">
+                                                            <%= json.discAprovadas %>
+                                                        </div>
+                                                        <div class="h6 mb-0 ">Disciplinas concluídas</div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Earnings (Monthly) Card Example -->
+                                    <div class="col-xl-12 col-md-6 mb-4 ">
+                                        <div class="painel painel-border-left-laranja py-2 ">
+                                            <div class="card-body ">
+                                                <div class="row no-gutters align-items-center ">
+                                                    <div class="col-auto margin-icone ">
+                                                        <img src="images/icon/icone-dashRestante.svg" alt="" style="width: 48px;">
+                                                    </div>
+                                                    <div class="flex align-items-center ">
+                                                        <div class="h3 mb-0 text-laranja mx-2" id="discRestantes">
+                                                            <%= json.discRestantes %>
+                                                        </div>
+                                                        <div class="h6 mb-0">Disciplinas restantes</div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Earnings (Monthly) Card Example -->
+                                    <div class="col-xl-12 col-md-6 mb-4">
+                                        <div class="painel painel-border-left-amarelo py-2">
+                                            <div class="card-body ">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col-auto margin-icone ">
+                                                        <img src="images/icon/icone-dashProgresso.svg " alt="" style="width: 48px;">
+                                                    </div>
+                                                    <div class="col mr-2 ">
+                                                        <div class="row no-gutters align-items-center">
+                                                            <div class="col-auto ">
+                                                                <div class="h3 mb-0 mr-3 text-amarelo" id="porcProgresso">
+                                                                    <%= json.progresso %>%
+                                                                </div>
+                                                            </div>
+                                                            <div class="col ">
+                                                                <div class="progress progress-sm mr-2" style="background-color: #C0C2CA;">
+                                                                    <div class="progress-bar background-amarelo" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" id="porcBarra"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <%- include('./partials/footer.ejs') %>
