@@ -156,6 +156,11 @@ function lerPDF(arquivo) {
             }
             let data = JSON.stringify(dados, null, 2)
             fs.writeFileSync('./dados/dados.json', data)
+
+            fs.unlink(pdfCaminho, (err) => {
+                if (err) throw err;
+                console.log('pdfCaminho was deleted');
+            });
         });
 
         pdfParser.loadPDF(pdfCaminho);
