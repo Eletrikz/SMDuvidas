@@ -135,13 +135,26 @@ router.post('/upload/uploadManual', (req, res) => {
 
 /* GET upload historico page. */
 router.get('/progressoPdf', function(req, res) {
+    if (fs.existsSync('dados/dados.json')) {
+        fs.unlinkSync('./dados/dados.json')
+    }
+
     res.render('progressoPdf')
 })
 
 /* POST upload histórico page. */
 router.post('/upload/upload', upload.single('file'), function(req, res) {
-    leitor.lerPDF(req.file.path)
-    res.redirect('/dashboard')
+    if (path.extname(req.file.path) != '.pdf') {
+        fs.unlink(req.file.path, (err) => {
+            if (err) throw err;
+            console.log('Arquivo estranho was deleted');
+        });
+        res.send('Formato do arquivo não suportado')
+    } else {
+        leitor.lerPDF(req.file.path)
+        res.redirect('/dashboard')
+    }
+
 })
 
 /* GET dashboard page. */
@@ -149,6 +162,7 @@ router.get('/dashboard', (req, res) => {
     setTimeout(() => {
         var json = require('./../dados/dados')
             //var json = JSON.parse(jsonData)
+
         res.render("dashboard", { json })
     }, 800)
 })

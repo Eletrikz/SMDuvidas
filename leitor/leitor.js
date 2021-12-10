@@ -1,3 +1,33 @@
+var countAprovado = 0; // Conta as disciplinas aprovadas
+var cont = 0 // Auxiliador para contar as disciplinas dos semestres
+var listaDisciplinas = [] // Lista com as disciplinas por semestre
+var semestres = ['2013.1', '2013.2', '2014.1', '2014.2', '2015.1', '2015.2', '2016.1', '2016.2', '2017.1', '2017.2', '2018.1', '2018.2', '2019.1', '2019.2', '2020.1', '2020.2', '2021.1', '2021.2']
+
+// Verifica se passou dos dados gerais
+var verificaComponentes = false
+
+// Verifica se 'entrou' em um semestre
+var verificaSemestre = false
+
+// Controle para a 1a vez 'entrou' em um semestre
+var primeiro = true
+
+// Variável de controle para validar um novo semestre
+var checaSemestre = ''
+
+// Contador para auxiliar a recuperação dos dados
+var contAux = 0
+var infoDiscente = []
+var infoCurso = []
+
+// Variável para indicar onde começa uma disciplina
+var contAuxDisciplina = 0
+var infoListaDisciplinas = []
+var infoDisciplinas = []
+
+// Variável para controlar o espaço de uma disciplina
+var checaDisciplina = false
+
 function lerPDF(arquivo) {
     var fs = require('fs');
     var PDFParser = require('pdf2json');
@@ -8,35 +38,6 @@ function lerPDF(arquivo) {
     if (fs.existsSync(pdfCaminho)) {
 
         var pdfParser = new PDFParser();
-        var countAprovado = 0; // Conta as disciplinas aprovadas
-        var cont = 0 // Auxiliador para contar as disciplinas dos semestres
-        var listaDisciplinas = [] // Lista com as disciplinas por semestre
-        var semestres = ['2013.1', '2013.2', '2014.1', '2014.2', '2015.1', '2015.2', '2016.1', '2016.2', '2017.1', '2017.2', '2018.1', '2018.2', '2019.1', '2019.2', '2020.1', '2020.2', '2021.1', '2021.2']
-
-        // Verifica se passou dos dados gerais
-        var verificaComponentes = false
-
-        // Verifica se 'entrou' em um semestre
-        var verificaSemestre = false
-
-        // Controle para a 1a vez 'entrou' em um semestre
-        var primeiro = true
-
-        // Variável de controle para validar um novo semestre
-        var checaSemestre = ''
-
-        // Contador para auxiliar a recuperação dos dados
-        var contAux = 0
-        var infoDiscente = []
-        var infoCurso = []
-
-        // Variável para indicar onde começa uma disciplina
-        var contAuxDisciplina = 0
-        var infoListaDisciplinas = []
-        var infoDisciplinas = []
-
-        // Variável para controlar o espaço de uma disciplina
-        var checaDisciplina = false
 
         pdfParser.on("pdfParser_dataError", function(errData) {
             console.error(errData.parserError)
@@ -156,6 +157,7 @@ function lerPDF(arquivo) {
             }
             let data = JSON.stringify(dados, null, 2)
             fs.writeFileSync('./dados/dados.json', data)
+            resetaVar()
 
             fs.unlink(pdfCaminho, (err) => {
                 if (err) throw err;
@@ -168,6 +170,30 @@ function lerPDF(arquivo) {
     } else {
         console.log('Arquivo não localizado');
     }
+}
+
+function resetaVar() {
+    countAprovado = 0;
+    cont = 0
+    listaDisciplinas = []
+
+    verificaComponentes = false
+
+    verificaSemestre = false
+
+    primeiro = true
+
+    checaSemestre = ''
+
+    contAux = 0
+    infoDiscente = []
+    infoCurso = []
+
+    contAuxDisciplina = 0
+    infoListaDisciplinas = []
+    infoDisciplinas = []
+
+    checaDisciplina = false
 }
 
 module.exports = {
