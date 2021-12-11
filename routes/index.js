@@ -135,10 +135,6 @@ router.post('/upload/uploadManual', (req, res) => {
 
 /* GET upload historico page. */
 router.get('/progressoPdf', function(req, res) {
-    if (fs.existsSync('dados/dados.json')) {
-        fs.unlinkSync('./dados/dados.json')
-    }
-
     res.render('progressoPdf')
 })
 
@@ -164,6 +160,10 @@ router.get('/dashboard', (req, res) => {
             //var json = JSON.parse(jsonData)
 
         res.render("dashboard", { json })
+        fs.unlink('./dados/dados.json', (err) => {
+            if (err) throw err;
+            console.log('json was deleted');
+        });
     }, 800)
 })
 
