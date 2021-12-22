@@ -1,6 +1,6 @@
 <%- include('./partials/header.ejs') %>
 
-    <body id="page-top" class="progresso" onload="<%='graficos(' + json.horasAprovadas + ', ' + json.horasRestantes + ', ' + json.listaDisciplinas + ')' %>">
+    <body id="page-top" class="progresso" onload="<%='pieChart(' + json.horasAprovadas + ', ' + json.horasRestantes + '), areaChart(' + JSON.stringify(json2) + ')' %>">
 
         <!-- Page Wrapper -->
         <div id="wrapper">
@@ -65,7 +65,7 @@
                             <div class="row">
 
                                 <!-- Area Chart -->
-                                <div class="col-xl-12 col-md-6 mb-2">
+                                <div class="col-xl-12 col-md-12 mb-2">
                                     <div class="painel mb-4">
                                         <!-- Card Header - Dropdown -->
                                         <div class="painel-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -74,7 +74,7 @@
                                         <!-- Card Body -->
                                         <div class="card-body">
                                             <div class="chart-area">
-                                                <canvas id="myAreaChart"></canvas>
+                                                <canvas id="myChart"></canvas>
                                             </div>
                                         </div>
                                     </div>

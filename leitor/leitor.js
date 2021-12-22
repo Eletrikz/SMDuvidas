@@ -140,6 +140,8 @@ function lerPDF(arquivo) {
             horasRestantes = discRestantes * 64 + 64 + 192
             progresso = parseInt((horasAprovadas + 64 + 192) / 2880 * 100)
 
+            let dadosDisciplnas = criaJsonDisciplina()
+
             let dados = {
                 dadosDiscente: infoDiscente,
                 dadosCurso: infoCurso,
@@ -151,18 +153,24 @@ function lerPDF(arquivo) {
                 horasRestantes: horasRestantes,
                 progresso: progresso
             }
-            console.log(dados);
 
             // Verifica se tem dados
-            if (verificaDados(dados)) {
-                escreverJson(dados)
+            if (verificaDados(dados) && verificaDados(dadosDisciplnas)) {
+                let data = JSON.stringify(dados, null, 2);
+                let data2 = JSON.stringify(dadosDisciplnas, null, 2);
+
+                fs.writeFile('./dados/dados.json', data, (err) => {
+                    if (err) throw err;
+                    console.log('The file has been saved!');
+                });
+                fs.writeFile('./dados/dadosDisciplnas.json', data2, (err) => {
+                    if (err) throw err;
+                    console.log('The file has been saved!');
+                });
 
                 resetaVar();
-                fs.unlinkSync(pdfCaminho);
-            } else {
-                fs.unlinkSync(pdfCaminho);
             }
-
+            fs.unlinkSync(pdfCaminho);
         });
 
         pdfParser.loadPDF(pdfCaminho);
@@ -211,12 +219,39 @@ function verificaDados(dados) {
     return c > 0 ? false : true
 }
 
-function escreverJson(dados) {
-    let data = JSON.stringify(dados, null, 2);
-    fs.writeFile('./dados/dados.json', data, (err) => {
-        if (err) throw err;
-        console.log('The file has been saved!');
-    });
+function criaJsonDisciplina() {
+    var dataArray = []
+    var semestreAux = []
+    semestreAux.push(infoListaDisciplinas[0][0])
+    var aux = listaDisciplinas.length
+
+    for (let i = 0; i < 12; i++) {
+        var obj = {
+            semestre: '',
+            qt: 0,
+            disciplinas: []
+        }
+
+        obj.semestre = ((i + 1) + 'º semestre');
+
+        if (i < aux) {
+            obj.qt = listaDisciplinas[i];
+            for (let j = 0; j < infoListaDisciplinas.length; j++) {
+                if (semestreAux[semestreAux.length - 1] == infoListaDisciplinas[j][0] && infoListaDisciplinas[j][2].includes("APROVADO")) {
+                    obj.disciplinas.push(infoListaDisciplinas[j][3] + ' - ' + infoListaDisciplinas[j][1]);
+                } else if (!semestreAux.includes(infoListaDisciplinas[j][0])) {
+                    semestreAux.push(infoListaDisciplinas[j][0])
+                    break
+                }
+            }
+        } else {
+            obj.qt = 20
+            obj.disciplinas = []
+        }
+
+        dataArray.push(obj)
+    }
+    return dataArray
 }
 
 function resetaVar() {

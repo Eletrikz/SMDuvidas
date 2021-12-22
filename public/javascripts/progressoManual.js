@@ -1,4 +1,4 @@
-let discPorSemestre = []
+var discPorSemestre = []
 var horasFeitas = 0
 var horasRestantes = 0
 

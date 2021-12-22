@@ -157,14 +157,21 @@ router.post('/upload/upload', upload.single('file'), function(req, res) {
 router.get('/dashboard', (req, res) => {
     setTimeout(() => {
         var json = require('./../dados/dados')
-            //var json = JSON.parse(jsonData)
+        var json2 = require('./../dados/dadosDisciplnas')
 
-        res.render("dashboard", { json })
+        res.render("dashboard", { json, json2 })
+    }, 600)
+
+    setTimeout(() => {
         fs.unlink('./dados/dados.json', (err) => {
             if (err) throw err;
             console.log('json was deleted');
         });
-    }, 800)
+        fs.unlink('./dados/dadosDisciplnas.json', (err) => {
+            if (err) throw err;
+            console.log('json was deleted');
+        });
+    }, 600)
 })
 
 module.exports = router;
