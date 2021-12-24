@@ -1,6 +1,7 @@
 <%- include('./partials/header.ejs') %>
 
-    <body id="page-top" class="progresso" onload="<%='pieChart(' + json.horasAprovadas + ', ' + json.horasRestantes + '), areaChart(' + JSON.stringify(json2) + ')' %>">
+
+    <body id="page-top" class="progresso" onload="pieChart('<%= json.horasAprovadas %>', '<%= json.horasRestantes %>', '<%= json.progresso %>'), areaChart('<%= JSON.stringify(json2) %>')">
 
         <!-- Page Wrapper -->
         <div id="wrapper">
@@ -38,20 +39,21 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
+                                                <h1 class="h4">Nascimento:
+                                                    <%= json.dadosDiscente[5] %>
+                                                </h1>
+                                                <h1 class="h4">Nome da mãe:
+                                                    <%= json.dadosDiscente[3] %>
+                                                </h1>
                                                 <h1 class="h4">Matrícula:
                                                     <%= json.dadosDiscente[0] %>
                                                 </h1>
                                                 <h1 class="h4">Curso:
                                                     <%= json.dadosCurso[0] %>
                                                 </h1>
-                                                <% for (let i = 0; i < json.dadosListaDisciplinas.length; i++) { %>
-                                                    <h6>
-                                                        <%= json.dadosListaDisciplinas[i][3] %> -
-                                                            <%= json.dadosListaDisciplinas[i][1] %> -
-                                                                <%= json.dadosListaDisciplinas[i][2] %> -
-                                                                    <%= json.dadosListaDisciplinas[i][0] %>
-                                                    </h6>
-                                                    <% } %>
+                                                <h1 class="h4">Endereço:
+                                                    <%= json.dadosDiscente[4] %>
+                                                </h1>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>

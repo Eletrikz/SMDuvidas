@@ -136,9 +136,9 @@ function lerPDF(arquivo) {
             });
 
             discRestantes = 41 - countAprovado
-            horasAprovadas = countAprovado * 64
-            horasRestantes = discRestantes * 64 + 64 + 192
-            progresso = parseInt((horasAprovadas + 64 + 192) / 2880 * 100)
+            horasAprovadas = countAprovado * 64 + 64 + 192
+            horasRestantes = discRestantes * 64
+            progresso = parseInt((horasAprovadas) / 2880 * 100)
 
             let dadosDisciplnas = criaJsonDisciplina()
 
@@ -215,7 +215,6 @@ function verificaDados(dados) {
             c++
         }
     });
-    console.log(c);
     return c > 0 ? false : true
 }
 

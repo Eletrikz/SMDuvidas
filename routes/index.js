@@ -155,6 +155,10 @@ router.post('/upload/upload', upload.single('file'), function(req, res) {
 
 /* GET dashboard page. */
 router.get('/dashboard', (req, res) => {
+    // Disable caching for content files
+    res.header("Cache-Control", "no-cache, no-store, must-revalidate");
+    res.header("Pragma", "no-cache");
+    res.header("Expires", 0);
     setTimeout(() => {
         var json = require('./../dados/dados')
         var json2 = require('./../dados/dadosDisciplnas')

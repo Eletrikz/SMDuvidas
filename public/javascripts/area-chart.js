@@ -1,5 +1,6 @@
 function areaChart(json) {
-    var data = verificaLista(json)
+    var parse = JSON.parse(json)
+    var data = verificaLista(parse)
 
     const cfg = {
         type: 'line',
@@ -54,14 +55,12 @@ function areaChart(json) {
                 },
                 tooltip: {
                     displayColors: false,
-                    backgroundColor: "rgb(255,255,255)",
+                    backgroundColor: "#314073",
                     titleMarginTop: 10,
-                    titleColor: '#000',
+                    titleColor: '#fff',
+                    textColor: '#fff',
                     titleFontSize: 14,
-                    borderColor: '#dddfeb',
-                    borderWidth: 1,
-                    xPadding: 15,
-                    yPadding: 15,
+                    caretPadding: 20,
 
                     interaction: {
                         intersect: false,
@@ -81,18 +80,6 @@ function areaChart(json) {
                                 textoTooltip.push(data.dataset.data[temp].disciplinas[i])
                             }
                             return textoTooltip
-                        },
-                        labelColor: (data) => {
-                            return {
-                                borderColor: 'rgb(0, 0, 255)',
-                                backgroundColor: 'rgb(255, 0, 0)',
-                                borderWidth: 2,
-                                borderDash: [2],
-                                borderRadius: 2,
-                            };
-                        },
-                        labelTextColor: (data) => {
-                            return '#000';
                         }
                     }
                 }
@@ -108,7 +95,6 @@ function verificaLista(json) {
     var discPorSemestreAtual = []
     var discRestantes = 41
     var data = json
-    console.log(json);
 
     // Organizando os dados do json
     for (let i = 0; i < json.length; i++) {
