@@ -1,0 +1,42 @@
+<%- include('./partials/header.ejs') %>
+
+    <body id="page-top" class="inicial">
+
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <%- include('./partials/navbar.ejs') %>
+
+                <!-- Content Wrapper -->
+                <div class="d-flex flex-column content-wrapper justify-content-center">
+
+                    <!-- Main Content -->
+                    <div id="content" class="margem">
+
+                        <div id="my_tree" style="height:80vh;border:1px solid blue;"></div>
+
+                    </div>
+                </div>
+        </div>
+
+        <script>
+            // Create a new d3.mitchTree object and set the data source
+            var treePlugin = new d3.mitchTree.boxedTree()
+                .setData(tree) // the data variable comes from simple_tree.js
+                .setElement(document.getElementById("my_tree"))
+                .setIdAccessor(function(data) {
+                    return data.id;
+                })
+                .setChildrenAccessor(function(data) {
+                    return data.children;
+                })
+                .setBodyDisplayTextAccessor(function(data) {
+                    return data.value;
+                })
+                .setTitleDisplayTextAccessor(function(data) {
+                    return data.title;
+                })
+                .initialize();
+        </script>
+
+        <%- include('./partials/footer.ejs') %>

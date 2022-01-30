@@ -178,4 +178,8 @@ router.get('/dashboard', (req, res) => {
     }, 600)
 })
 
+router.get('/atividadesComplementares', (req, res) => {
+    res.render('ativComplementares')
+})
+
 module.exports = router;

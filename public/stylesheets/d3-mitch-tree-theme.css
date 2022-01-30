@@ -1,0 +1,95 @@
+.mitch-d3-tree.boxed-tree.default .node {
+    /*
+					Do NOT do any font related CSS that
+					would affect dimensions here, as 
+					D3Plus TextBox won't take them 
+					into account when performing
+					various operations such as ellipsis.
+				*/
+}
+
+
+/* LINHAS */
+
+.mitch-d3-tree.boxed-tree.default .link {
+    fill: none;
+    stroke: rgb(199, 38, 38);
+    stroke-width: 2px;
+}
+
+
+/*ELEMENTOS DAS CAIXAS COLAPSADAS (A DIREITA) */
+
+.mitch-d3-tree.boxed-tree.default .node.collapsed .body-group .body-box {
+    fill: pink;
+}
+
+
+/* ELEMENTOS DA CAIXA SELECIONADA (A ESQUERDA) */
+
+.mitch-d3-tree.boxed-tree.default .node.selected .body-group .body-box {
+    stroke: yellow;
+    stroke-width: 2.5px;
+}
+
+
+/* ELEMENTOS DAS CAIXAS */
+
+.mitch-d3-tree.boxed-tree.default .node .body-group .body-box {
+    stroke: purple;
+    fill: lightgreen;
+    rx: 10;
+    ry: 10;
+}
+
+
+/* COR DO TEXTO DAS CAIXAS */
+
+.mitch-d3-tree.boxed-tree.default .node .body-group text {
+    fill: lightslategray;
+}
+
+
+/* ELEMENTOS DAS CAIXAS DOS TÍTULOS */
+
+.mitch-d3-tree.boxed-tree.default .node .title-group .title-box {
+    stroke: pink;
+    fill: red;
+    rx: 10;
+    ry: 10;
+}
+
+.mitch-d3-tree.boxed-tree.default .node .title-group text {
+    fill: black;
+}
+
+.mitch-d3-tree.circle-tree.default .node text {
+    font: 12px sans-serif;
+}
+
+
+/*
+.mitch-d3-tree.circle-tree.default .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px;
+}
+
+.mitch-d3-tree.circle-tree.default .node.collapsed circle {
+    fill: pink;
+}
+
+.mitch-d3-tree.circle-tree.default .node.selected circle {
+    stroke: purple;
+    stroke-width: 2.5px;
+}
+
+.mitch-d3-tree.circle-tree.default .node circle {
+    fill: #fff;
+    stroke: purple;
+    stroke-width: 3px;
+}
+*/
+
+
+/*# sourceMappingURL=d3-mitch-tree-theme-default.css.map */
