@@ -1,29 +1,28 @@
-var express = require('express');
-var path = require('path');
-var fs = require('fs');
-var router = express.Router();
+const express = require('express')
+const path = require('path')
+const fs = require('fs')
+const router = express.Router()
 
 const Disciplinas = require('./../database/Disciplinas')
 
 const multer = require('multer')
-    //const storage = multer.memoryStorage()
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, "temp/")
+        cb(null, 'temp/')
     },
     filename: function(req, file, cb) {
         cb(null, file.originalname + Date.now() + path.extname(file.originalname))
     }
 })
 
-var upload = multer({ storage })
+const upload = multer({ storage })
 
 const leitor = require('./../leitor/leitor')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index');
-});
+    res.render('index')
+})
 
 /* GET escolha page. */
 router.get('/escolhaProgresso', function(req, res) {
@@ -38,64 +37,64 @@ router.get('/progressoManual', function(req, res) {
             ['codigo', 'ASC']
         ]
     }).then(disciplinas => {
-        res.render("progressoManual", { disciplinas: disciplinas })
+        res.render('progressoManual', { disciplinas: disciplinas })
     })
 })
 
 /* POST upload manual page. */
 router.post('/upload/uploadManual', (req, res) => {
-    var lista = []
-    var discAprovadas = 0
+    const lista = []
+    let discAprovadas = 0
 
     try {
-        var s1 = req.body.disciplinasObrigatorias1.length
+        const s1 = req.body.disciplinasObrigatorias1.length
         lista.push(s1)
         discAprovadas += s1
     } catch (error) {}
 
     try {
-        var s2 = req.body.disciplinasObrigatorias2.length
+        const s2 = req.body.disciplinasObrigatorias2.length
         lista.push(s2)
         discAprovadas += s2
     } catch (error) {}
 
     try {
-        var s3 = req.body.disciplinasObrigatorias3.length
+        const s3 = req.body.disciplinasObrigatorias3.length
         lista.push(s3)
         discAprovadas += s3
     } catch (error) {}
 
     try {
-        var s4 = req.body.disciplinasObrigatorias4.length
+        const s4 = req.body.disciplinasObrigatorias4.length
         lista.push(s4)
         discAprovadas += s4
     } catch (error) {}
 
     try {
-        var s5 = req.body.disciplinasObrigatorias5.length
+        const s5 = req.body.disciplinasObrigatorias5.length
         lista.push(s5)
         discAprovadas += s5
     } catch (error) {}
 
     try {
-        var s6 = req.body.disciplinasObrigatorias6.length
+        const s6 = req.body.disciplinasObrigatorias6.length
         lista.push(s6)
         discAprovadas += s6
     } catch (error) {}
 
     try {
-        var s7 = req.body.disciplinasObrigatorias7.length
+        const s7 = req.body.disciplinasObrigatorias7.length
         lista.push(s7)
         discAprovadas += s7
     } catch (error) {}
 
     try {
-        var s8 = req.body.disciplinasObrigatorias8.length
+        const s8 = req.body.disciplinasObrigatorias8.length
         lista.push(s8)
         discAprovadas += s8
     } catch (error) {}
 
-    var so = 0
+    let so = 0
     try {
         so = req.body.disciplinasOptativas.length
         discAprovadas += so
@@ -103,7 +102,7 @@ router.post('/upload/uploadManual', (req, res) => {
 
     for (let i = 0; i < lista.length; i++) {
         if (lista[i] <= 3) {
-            var v = 5 - lista[i]
+            const v = 5 - lista[i]
             if (so < v) {
                 lista[i] += so
                 so = 0
@@ -114,12 +113,12 @@ router.post('/upload/uploadManual', (req, res) => {
         }
     }
 
-    var discRestantes = 41 - discAprovadas
-    var horasAprovadas = discAprovadas * 64
-    var horasRestantes = discRestantes * 64 + 64 + 192
-    var progresso = parseInt((horasAprovadas + 64 + 192) / 2880 * 100)
+    const discRestantes = 41 - discAprovadas
+    const horasAprovadas = discAprovadas * 64
+    const horasRestantes = discRestantes * 64 + 64 + 192
+    const progresso = parseInt((horasAprovadas + 64 + 192) / 2880 * 100)
 
-    let dados = {
+    const dados = {
         listaDisciplinas: lista,
         discAprovadas: discAprovadas,
         discRestantes: discRestantes,
@@ -127,7 +126,7 @@ router.post('/upload/uploadManual', (req, res) => {
         horasRestantes: horasRestantes,
         progresso: progresso
     }
-    let data = JSON.stringify(dados, null, 2)
+    const data = JSON.stringify(dados, null, 2)
     fs.writeFileSync('./dados/dados.json', data)
 
     res.redirect('/dashboard')
@@ -140,41 +139,40 @@ router.get('/progressoPdf', function(req, res) {
 
 /* POST upload histórico page. */
 router.post('/upload/upload', upload.single('file'), function(req, res) {
-    if (path.extname(req.file.path) != '.pdf') {
+    if (path.extname(req.file.path) !== '.pdf') {
         fs.unlink(req.file.path, (err) => {
-            if (err) throw err;
-            console.log('Arquivo estranho was deleted');
-        });
+            if (err) throw err
+            console.log('Arquivo estranho was deleted')
+        })
         res.send('Formato do arquivo não suportado')
     } else {
         leitor.lerPDF(req.file.path)
         res.redirect('/dashboard')
     }
-
 })
 
 /* GET dashboard page. */
 router.get('/dashboard', (req, res) => {
     // Disable caching for content files
-    res.header("Cache-Control", "no-cache, no-store, must-revalidate");
-    res.header("Pragma", "no-cache");
-    res.header("Expires", 0);
+    res.header('Cache-Control', 'no-cache, no-store, must-revalidate')
+    res.header('Pragma', 'no-cache')
+    res.header('Expires', 0)
     setTimeout(() => {
-        var json = require('./../dados/dados')
-        var json2 = require('./../dados/dadosDisciplnas')
+        const json = require('./../dados/dados')
+        const json2 = require('./../dados/dadosDisciplnas')
 
-        res.render("dashboard", { json, json2 })
+        res.render('dashboard', { json, json2 })
     }, 600)
 
     setTimeout(() => {
         fs.unlink('./dados/dados.json', (err) => {
-            if (err) throw err;
-            console.log('json was deleted');
-        });
+            if (err) throw err
+            console.log('json was deleted')
+        })
         fs.unlink('./dados/dadosDisciplnas.json', (err) => {
-            if (err) throw err;
-            console.log('json was deleted');
-        });
+            if (err) throw err
+            console.log('json was deleted')
+        })
     }, 600)
 })
 
@@ -182,4 +180,4 @@ router.get('/atividadesComplementares', (req, res) => {
     res.render('ativComplementares')
 })
 
-module.exports = router;
+module.exports = router

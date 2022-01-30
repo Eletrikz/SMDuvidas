@@ -1,6 +1,6 @@
 function areaChart(json) {
-    var parse = JSON.parse(json)
-    var data = verificaLista(parse)
+    const parse = JSON.parse(json)
+    const data = verificaLista(parse)
 
     const cfg = {
         type: 'line',
@@ -9,8 +9,8 @@ function areaChart(json) {
             datasets: [{
                 data: data,
                 fill: true,
-                backgroundColor: "rgba(255, 119, 46, 0.2)",
-                borderColor: "#FF772E",
+                backgroundColor: 'rgba(255, 119, 46, 0.2)',
+                borderColor: '#FF772E',
                 tickColor: '#fff',
 
                 parsing: {
@@ -25,7 +25,7 @@ function areaChart(json) {
             scales: {
                 x: {
                     ticks: {
-                        color: '#fff',
+                        color: '#fff'
                     },
                     grid: {
                         display: false,
@@ -44,10 +44,10 @@ function areaChart(json) {
                         borderDash: [2],
                         zeroLineBorderDash: [2],
                         color: function(context) {
-                            return '#fff';
+                            return '#fff'
                         }
-                    },
-                },
+                    }
+                }
             },
             plugins: {
                 legend: {
@@ -55,7 +55,7 @@ function areaChart(json) {
                 },
                 tooltip: {
                     displayColors: false,
-                    backgroundColor: "#314073",
+                    backgroundColor: '#314073',
                     titleMarginTop: 10,
                     titleColor: '#fff',
                     textColor: '#fff',
@@ -64,15 +64,15 @@ function areaChart(json) {
 
                     interaction: {
                         intersect: false,
-                        mode: 'index',
+                        mode: 'index'
                     },
 
                     callbacks: {
                         label: (data) => {
-                            var textoTooltip = []
-                            var temp = parseInt(data.label.slice(0)) - 1
+                            const textoTooltip = []
+                            const temp = parseInt(data.label.slice(0)) - 1
 
-                            if (data.dataset.data[temp].qt == 0) {
+                            if (data.dataset.data[temp].qt === 0) {
                                 return 'Não há disciplinas'
                             }
 
@@ -85,20 +85,20 @@ function areaChart(json) {
                 }
             }
         }
-    };
+    }
 
-    const ctx = document.getElementById('myChart').getContext('2d');
+    const ctx = document.getElementById('myChart').getContext('2d')
     const myChart = new Chart(ctx, cfg)
 }
 
 function verificaLista(json) {
-    var discPorSemestreAtual = []
-    var discRestantes = 41
-    var data = json
+    const discPorSemestreAtual = []
+    let discRestantes = 41
+    const data = json
 
     // Organizando os dados do json
     for (let i = 0; i < json.length; i++) {
-        if (json[i].disciplinas.length == 0 && json[i].qt == 20) {
+        if (json[i].disciplinas.length === 0 && json[i].qt === 20) {
             discPorSemestreAtual.push(null)
         } else {
             discPorSemestreAtual.push(json[i].qt)
@@ -106,8 +106,8 @@ function verificaLista(json) {
         }
     }
 
-    var semestresRestante = 0
-    if (discRestantes % 6 == 0) {
+    let semestresRestante = 0
+    if (discRestantes % 6 === 0) {
         semestresRestante = discRestantes / 6
     } else {
         semestresRestante = parseInt(discRestantes / 6) + 1
