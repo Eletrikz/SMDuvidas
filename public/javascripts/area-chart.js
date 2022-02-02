@@ -88,6 +88,8 @@ function areaChart(json) {
     }
 
     const ctx = document.getElementById('myChart').getContext('2d')
+
+    // eslint-disable-next-line no-undef
     const myChart = new Chart(ctx, cfg)
 }
 

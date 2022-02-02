@@ -13,13 +13,48 @@
                     <!-- Main Content -->
                     <div id="content" class="margem">
 
-                        <div id="my_tree" style="height:80vh;border:1px solid blue;"></div>
+                        <div class="row justify-content-center">
+
+                            <div class="col-xl-11 col-md-11 mb-4" id="texto">
+                                <h1 class="mb-4">Atividades Complementares</h1>
+                                <h4 class="mb-4">As Atividades Complementares constituem de um conjunto de estratégias que permitem, a articulação entre teoria e prática, por parte do estudante, dos saberes e habilidades necessárias à sua formação.</h4>
+                                <h4 class="mb-4">As atividades são divididas em grupos e o aproveitamento da carga horária pode ser visualizado abaixo</h4>
+
+                                <ul class="h5 mb-4" style="list-style-type:none;">
+                                    <li>Grupo I: Atividades de iniciação à docência, à pesquisa e/ou à extensão: até 96 horas pelo conjunto de atividades</li>
+                                    <li>Grupo II: Atividades artístico-culturais e esportivas: até 80 horas para o conjunto de atividades</li>
+                                    <li>Grupo III: Atividades de participação e/ou organização de eventos: até 32 horas para o conjunto de atividades</li>
+                                    <li>Grupo IV: Experiências ligadas à formação profissional e/ou correlatas: até 64 horas para o conjunto de atividades</li>
+                                    <li>Grupo V: Produção Técnica e/ou Científica: até 96 horas para o conjunto de atividades
+                                    </li>
+                                    <li>Grupo VI: Vivências de gestão: até 48 horas para o conjunto de atividades</li>
+                                    <li>Grupo VII: Outras atividades: até 48 horas para o conjunto de atividades</li>
+                                </ul>
+                                <h4 class="mb-4">Clique <a onclick="mostra()" style="color: #F6D467; cursor: pointer;">aqui</a> e veja a árvore
+                                </h4>
+                            </div>
+
+                            <!-- Tree -->
+                            <div class="col-xl-12 col-md-12" id="arvore" style="display: none;">
+                                <div class="painel">
+                                    <div class="painel-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h2 class="m-0">Árvore</h6>
+                                    </div>
+                                    <div id="my_tree" style="height:80vh;"></div>
+                                </div>
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>
         </div>
 
         <script>
+            function mostra() {
+                document.getElementById('texto').style.display = 'none'
+                document.getElementById('arvore').style.display = 'block'
+            }
             // Create a new d3.mitchTree object and set the data source
             var treePlugin = new d3.mitchTree.boxedTree()
                 .setData(tree) // the data variable comes from simple_tree.js
@@ -36,6 +71,7 @@
                 .setTitleDisplayTextAccessor(function(data) {
                     return data.title;
                 })
+                .getOrientation()
                 .initialize();
         </script>
 

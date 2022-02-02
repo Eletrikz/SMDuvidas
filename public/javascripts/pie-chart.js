@@ -32,5 +32,7 @@ function pieChart(horasAprovadas, horasRestantes, progresso) {
     }
     document.getElementById('porcBarra').style.width = progresso + '%'
     const ctx = document.getElementById('myPieChart').getContext('2d')
+
+    // eslint-disable-next-line no-undef
     const myPieChart = new Chart(ctx, cfg)
 }
