@@ -4,7 +4,6 @@ const tree = {
     children: [{
             value: 'Grupo I',
             children: [{
-
                     value: 'Bolsa PID ou PAIP',
                     children: [
                         { value: 'Até 96h no curso', title: 'Limite de Aproveitamento' },
@@ -12,7 +11,6 @@ const tree = {
                     ]
                 },
                 {
-
                     value: 'Bolsa de Extensão',
                     children: [
                         { value: 'Até 96h', title: 'Limite de Aproveitamento' },
@@ -20,7 +18,6 @@ const tree = {
                     ]
                 },
                 {
-
                     value: 'Participação em docência no ensino fundamental e médio',
                     children: [
                         { value: 'Até 64h no curso', title: 'Limite de Aproveitamento' },
@@ -28,7 +25,6 @@ const tree = {
                     ]
                 },
                 {
-
                     value: 'Iniciação científica/PET',
                     children: [
                         { title: 'Limite de Aproveitamento', value: 'Até 96h no curso' },
@@ -36,7 +32,6 @@ const tree = {
                     ]
                 },
                 {
-
                     value: 'Projeto Social',
                     children: [
                         { value: 'Até 32h', title: 'Limite de Aproveitamento' },
@@ -44,7 +39,6 @@ const tree = {
                     ]
                 },
                 {
-
                     value: 'Curso de extensão (exceto curso de línguas nas Casas de Cultura)',
                     children: [
                         { value: 'Até 64h', title: 'Limite de Aproveitamento' },
@@ -52,7 +46,6 @@ const tree = {
                     ]
                 },
                 {
-
                     value: 'Atividades de extensão oferecidas por outras instituições',
                     children: [
                         { value: 'Até 32h', title: 'Limite de Aproveitamento' },
@@ -60,7 +53,6 @@ const tree = {
                     ]
                 },
                 {
-
                     value: 'Grupo de Estudo/ Aprendizagem cooperativa',
                     children: [
                         { value: 'Até 32h', title: 'Limite de Aproveitamento' },
@@ -68,7 +60,6 @@ const tree = {
                     ]
                 },
                 {
-
                     value: 'Participação em Projeto de Pesquisa',
                     children: [
                         { value: 'Até 20h', title: 'Limite de Aproveitamento' },
@@ -76,7 +67,6 @@ const tree = {
                     ]
                 },
                 {
-
                     value: 'Monitoria voluntária não cadastrada na Prograd',
                     children: [
                         { value: 'Até 36h', title: 'Limite de Aproveitamento' },
