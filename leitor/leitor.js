@@ -228,9 +228,6 @@ function lerPDF(arquivo) {
             const dadosDisciplnas = criaJsonDisciplina()
 
             const dados = {
-                dadosDiscente: infoDiscente,
-                dadosCurso: infoCurso,
-                dadosListaDisciplinas: infoListaDisciplinas,
                 listaDisciplinas,
                 discAprovadas: countAprovado,
                 discRestantes,
@@ -239,16 +236,28 @@ function lerPDF(arquivo) {
                 progresso
             }
 
+            const dados3 = {
+                dadosDiscente: infoDiscente,
+                dadosCurso: infoCurso,
+                dadosListaDisciplinas: infoListaDisciplinas
+            }
+
             // Verifica se tem dados
             if (verificaDados(dados) && verificaDados(dadosDisciplnas)) {
                 const data = JSON.stringify(dados, null, 2)
                 const data2 = JSON.stringify(dadosDisciplnas, null, 2)
+                const data3 = JSON.stringify(dados3, null, 2)
 
                 fs.writeFile('./dados/dados.json', data, (err) => {
                     if (err) throw err
                     console.log('The file has been saved!')
                 })
-                fs.writeFile('./dados/dadosDisciplnas.json', data2, (err) => {
+                fs.writeFile('./dados/dadosDisciplinas.json', data2, (err) => {
+                    if (err) throw err
+                    console.log('The file has been saved!')
+                })
+
+                fs.writeFile('./dados/dadosGerais.json', data3, (err) => {
                     if (err) throw err
                     console.log('The file has been saved!')
                 })

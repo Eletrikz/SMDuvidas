@@ -126,8 +126,25 @@ router.post('/upload/uploadManual', (req, res) => {
         horasRestantes: horasRestantes,
         progresso: progresso
     }
+    const dados2 = null, dados3 = null
+    
     const data = JSON.stringify(dados, null, 2)
-    fs.writeFileSync('./dados/dados.json', data)
+    const data2 = JSON.stringify(dados2, null, 2)
+    const data3 = JSON.stringify(dados3, null, 2)
+    fs.writeFile('./dados/dados.json', data, (err) => {
+        if (err) throw err
+        console.log('The file has been saved!')
+    })
+
+    fs.writeFile('./dados/dadosDisciplinas.json', data2, (err) => {
+        if (err) throw err
+        console.log('The file has been saved!')
+    })
+
+    fs.writeFile('./dados/dadosGerais.json', data3, (err) => {
+        if (err) throw err
+        console.log('The file has been saved!')
+    })
 
     res.redirect('/dashboard')
 })
@@ -159,21 +176,26 @@ router.get('/dashboard', (req, res) => {
     res.header('Expires', 0)
     setTimeout(() => {
         const json = require('./../dados/dados')
-        const json2 = require('./../dados/dadosDisciplnas')
+        const json2 = require('./../dados/dadosDisciplinas')
+        const json3 = require('./../dados/dadosGerais')
 
-        res.render('dashboard', { json, json2 })
-    }, 600)
+        res.render('dashboard', { json, json2, json3 })
+    }, 800)
 
     setTimeout(() => {
         fs.unlink('./dados/dados.json', (err) => {
             if (err) throw err
             console.log('json was deleted')
         })
-        fs.unlink('./dados/dadosDisciplnas.json', (err) => {
+        fs.unlink('./dados/dadosDisciplinas.json', (err) => {
             if (err) throw err
             console.log('json was deleted')
         })
-    }, 600)
+        fs.unlink('./dados/dadosGerais.json', (err) => {
+            if (err) throw err
+            console.log('json was deleted')
+        })
+    }, 1000)
 })
 
 router.get('/atividadesComplementares', (req, res) => {

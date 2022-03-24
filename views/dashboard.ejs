@@ -1,7 +1,12 @@
 <%- include('./partials/header.ejs') %>
 
+    <% if(json2==null) { %>
 
-    <body id="page-top" class="progresso" onload="pieChart('<%= json.horasAprovadas %>', '<%= json.horasRestantes %>', '<%= json.progresso %>'), areaChart('<%= JSON.stringify(json2) %>')">
+
+    <body id="page-top" class="progresso">
+        <% } else { %>
+            <body id="page-top" class="progresso" onload="pieChart('<%= json.horasAprovadas %>', '<%= json.horasRestantes %>', '<%= json.progresso %>'), areaChart('<%= JSON.stringify(json2) %>')">
+        <% } %>
 
         <!-- Page Wrapper -->
         <div id="wrapper">
@@ -18,50 +23,58 @@
                         <div class="container-fluid justify-content-center" id="relatorio">
 
                             <!-- Page Heading -->
-                            <div class="d-sm-flex align-items-center justify-content-between mt-4 mb-4">
-                                <h1 class="h3 mb-0">
-                                    <%= json.dadosDiscente[1] %>
-                                </h1>
-
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary ml-4" data-toggle="modal" data-target="#Modal">
-                                    Info
-                                </button>
-
-                                <!-- Modal -->
-                                <div class="modal fade" style="color: black;" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" style="max-width: 720px" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Mais informações</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h1 class="h4">Nascimento:
-                                                    <%= json.dadosDiscente[5] %>
-                                                </h1>
-                                                <h1 class="h4">Nome da mãe:
-                                                    <%= json.dadosDiscente[3] %>
-                                                </h1>
-                                                <h1 class="h4">Matrícula:
-                                                    <%= json.dadosDiscente[0] %>
-                                                </h1>
-                                                <h1 class="h4">Curso:
-                                                    <%= json.dadosCurso[0] %>
-                                                </h1>
-                                                <h1 class="h4">Endereço:
-                                                    <%= json.dadosDiscente[4] %>
-                                                </h1>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <% if(json3==null) { %>
+                                <div class="d-sm-flex align-items-center justify-content-between mt-4 mb-4">
+                                    <h1 class="h3 mb-0">
+                                        Seu Progresso
+                                    </h1>
+                                </div>
+                                <% } else { %>
+                                    <div class="d-sm-flex align-items-center justify-content-between mt-4 mb-4">
+                                        <h1 class="h3 mb-0">
+                                            <%= json3.dadosDiscente[1] %>
+                                        </h1>
+        
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary ml-4" data-toggle="modal" data-target="#Modal">
+                                            Info
+                                        </button>
+        
+                                        <!-- Modal -->
+                                        <div class="modal fade" style="color: black;" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" style="max-width: 720px" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Mais informações</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h1 class="h4">Nascimento:
+                                                            <%= json3.dadosDiscente[5] %>
+                                                        </h1>
+                                                        <h1 class="h4">Nome da mãe:
+                                                            <%= json3.dadosDiscente[3] %>
+                                                        </h1>
+                                                        <h1 class="h4">Matrícula:
+                                                            <%= json3.dadosDiscente[0] %>
+                                                        </h1>
+                                                        <h1 class="h4">Curso:
+                                                            <%= json3.dadosCurso[0] %>
+                                                        </h1>
+                                                        <h1 class="h4">Endereço:
+                                                            <%= json3.dadosDiscente[4] %>
+                                                        </h1>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                <% } %>
 
                             <!-- Content Row -->
                             <div class="row">
