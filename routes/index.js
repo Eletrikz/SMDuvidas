@@ -163,8 +163,16 @@ router.post('/upload/upload', upload.single('file'), function(req, res) {
         })
         res.send('Formato do arquivo não suportado')
     } else {
-        leitor.lerPDF(req.file.path)
-        res.redirect('/dashboard')
+        Disciplinas.findAll({
+            raw: true,
+            where:{tipo:3},
+            order: [
+                ['codigo', 'ASC']
+            ]
+        }).then(disciplinas => {
+            leitor.lerPDF(req.file.path, disciplinas)
+            res.redirect('/dashboard')
+        })
     }
 })
 
@@ -180,9 +188,9 @@ router.get('/dashboard', (req, res) => {
         const json3 = require('./../dados/dadosGerais')
 
         res.render('dashboard', { json, json2, json3 })
-    }, 800)
+    }, 2000)
 
-    setTimeout(() => {
+    /*setTimeout(() => {
         fs.unlink('./dados/dados.json', (err) => {
             if (err) throw err
             console.log('json was deleted')
@@ -195,7 +203,7 @@ router.get('/dashboard', (req, res) => {
             if (err) throw err
             console.log('json was deleted')
         })
-    }, 1000)
+    }, 1000) */
 })
 
 router.get('/atividadesComplementares', (req, res) => {

@@ -34,6 +34,9 @@ let discRestantes = 0
 let horasAprovadas = 0
 let horasRestantes = 0
 let progresso = 0
+// Conta as disciplinas eletivas aprovadas
+let discEletQuarto = 4
+let discEletQuinto = 3
 
 function adicionaDiscente(linha) {
     if (contAux === 3 || contAux === 4 || contAux === 7 || contAux === 11 || contAux === 12 || contAux === 21) {
@@ -66,6 +69,23 @@ function verificaDados(dados) {
     })
     return !(c > 0)
 }
+
+function verificaEletiva(listaDisciplinas, disciplinasEletivas) {
+    for (let i = 0; i < listaDisciplinas.length; i++) {
+        for (let j = 0; j < disciplinasEletivas.length; j++) {
+            if (listaDisciplinas[i][3] == disciplinasEletivas[j].codigo && (listaDisciplinas[i][2] == "APROVADO" || listaDisciplinas[i][2] == "APROVADO MÉDIA")) {
+                //console.log(disciplinasEletivas[j].codigo, "   ", listaDisciplinas[i][3])
+                if (disciplinasEletivas[j].semestre == 4 && discEletQuarto > 0) {
+                    discEletQuarto--
+                }
+                else if (disciplinasEletivas[j].semestre == 5 && discEletQuinto > 0) {
+                    discEletQuinto--
+                }
+            }
+        }
+    }
+}    
+
 
 function criaJsonDisciplina() {
     const dataArray = []
@@ -128,7 +148,7 @@ function resetaVar() {
     return true
 }
 
-function lerPDF(arquivo) {
+function lerPDF(arquivo, disciplinasEletivas) {
     const pdfCaminho = arquivo
     console.log(pdfCaminho)
 
@@ -225,6 +245,9 @@ function lerPDF(arquivo) {
             horasRestantes = discRestantes * 64
             progresso = parseInt((horasAprovadas / 2880) * 100, 10)
 
+            verificaEletiva(infoListaDisciplinas, disciplinasEletivas)
+            console.log(discEletQuarto,"     ", discEletQuinto)
+
             const dadosDisciplnas = criaJsonDisciplina()
 
             const dados = {
@@ -233,7 +256,9 @@ function lerPDF(arquivo) {
                 discRestantes,
                 horasAprovadas,
                 horasRestantes,
-                progresso
+                progresso,
+                discEletQuarto,
+                discEletQuinto
             }
 
             const dados3 = {
@@ -277,5 +302,6 @@ module.exports = {
     lerPDF,
     verificaFimSemestre,
     verificaDados,
-    resetaVar
+    resetaVar,
+    verificaEletiva
 }

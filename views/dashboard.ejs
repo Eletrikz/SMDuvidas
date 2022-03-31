@@ -178,42 +178,41 @@
 
                                 <div class="col-xl-5 col-lg-5">
                                     <!-- Earnings (Monthly) Card Example -->
-                                    <div class="col-xl-12 col-md-6 mb-4">
-                                        <div class="painel painel-border-left-azul py-2">
-                                            <div class="card-body">
-                                                <div class="row no-gutters align-items-center">
-                                                    <div class="col-auto margin-icone">
-                                                        <img src="images/icon/icone-dashConcluida.svg" alt="" style="width: 48px;">
-                                                    </div>
-                                                    <div class="flex align-items-center ">
-                                                        <div class="h3 mb-0 text-azul mx-2 " id="discConluidas">
-                                                            <%= json.discAprovadas %>
+                                    <div class="col-xl-12 col-md-6 flex">
+                                        <div class="col-xl-6 col-md-3 mb-4" style="padding-left: 0;">
+                                            <div class="painel painel-border-left-azul py-2">
+                                                <div class="card-body">
+                                                    <div class="row no-gutters align-items-center">
+                                                        <div class="col-auto margin-icone">
+                                                            <img src="images/icon/icone-dashConcluida.svg" alt="" style="width: 48px;">
                                                         </div>
-                                                        <div class="h6 mb-0 ">Disciplinas concluídas</div>
+                                                        <div class="flex align-items-center ">
+                                                            <div class="h3 mb-0 text-azul mx-2 " id="discConluidas">
+                                                                <%= json.discAprovadas %>
+                                                            </div>
+                                                            <div class="h6 mb-0 ">Disciplinas concluídas
+                                                            </div>
+                                                        </div>
                                                     </div>
-
-
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Earnings (Monthly) Card Example -->
-                                    <div class="col-xl-12 col-md-6 mb-4 ">
-                                        <div class="painel painel-border-left-laranja py-2 ">
-                                            <div class="card-body ">
-                                                <div class="row no-gutters align-items-center ">
-                                                    <div class="col-auto margin-icone ">
-                                                        <img src="images/icon/icone-dashRestante.svg" alt="" style="width: 48px;">
-                                                    </div>
-                                                    <div class="flex align-items-center ">
-                                                        <div class="h3 mb-0 text-laranja mx-2" id="discRestantes">
-                                                            <%= json.discRestantes %>
+                                        <div class="col-xl-6 col-md-3 mb-4" style="padding-right: 0;">
+                                            <div class="painel painel-border-left-laranja py-2 ">
+                                                <div class="card-body ">
+                                                    <div class="row no-gutters align-items-center ">
+                                                        <div class="col-auto margin-icone ">
+                                                            <img src="images/icon/icone-dashRestante.svg" alt="" style="width: 48px;">
                                                         </div>
-                                                        <div class="h6 mb-0">Disciplinas restantes</div>
+                                                        <div class="flex align-items-center ">
+                                                            <div class="h3 mb-0 text-laranja mx-2" id="discRestantes">
+                                                                <%= json.discRestantes %>
+                                                            </div>
+                                                            <div class="h6 mb-0">Disciplinas restantes
+                                                            </div>
+                                                        </div>
                                                     </div>
-
-
                                                 </div>
                                             </div>
                                         </div>
@@ -236,7 +235,8 @@
                                                             </div>
                                                             <div class="col ">
                                                                 <div class="progress progress-sm mr-2" style="background-color: #C0C2CA;">
-                                                                    <div class="progress-bar background-amarelo" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" id="porcBarra"></div>
+                                                                    <div class="progress-bar background-amarelo" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" id="porcBarra">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -246,6 +246,45 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="col-xl-12 col-md-6 mb-4">
+                                        <div class=" painel painel-border-left-laranja py-2 ">
+                                            <div class=" card-body ">
+                                                <div class=" row no-gutters align-items-center ">
+                                                    <div class="col-auto margin-icone ">
+                                                        <img src="images/icon/icone-dashProgresso.svg " alt="" style="width: 48px;">
+                                                    </div>
+                                                    <div class=" flex align-items-center ">
+                                                        <div class=" h3 mb-0 text-laranja mx-2 " id=" discRestantes ">
+                                                            <%= json.discEletQuarto %>
+                                                        </div>
+                                                        <div class=" h6 mb-0 ">Disciplinas eletivas do 4° semestre restantes
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-12 col-md-6 mb-2">
+                                        <div class=" painel painel-border-left-laranja py-2 ">
+                                            <div class=" card-body ">
+                                                <div class=" row no-gutters align-items-center ">
+                                                    <div class="col-auto margin-icone ">
+                                                        <img src="images/icon/icone-dashProgresso.svg " alt="" style="width: 48px;">
+                                                    </div>
+                                                    <div class=" flex align-items-center ">
+                                                        <div class=" h3 mb-0 text-laranja mx-2 " id=" discRestantes ">
+                                                            <%= json.discEletQuinto %>
+                                                        </div>
+                                                        <div class=" h6 mb-0 ">Disciplinas eletivas do 5° semestre restantes
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
 
