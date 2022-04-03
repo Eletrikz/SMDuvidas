@@ -259,9 +259,7 @@ function lerPDF(arquivo, disciplinasEletivas) {
                 discRestantes,
                 horasAprovadas,
                 horasRestantes,
-                progresso,
-                discEletQuarto,
-                discEletQuinto
+                progresso
             }
 
             const dados3 = {
@@ -270,11 +268,17 @@ function lerPDF(arquivo, disciplinasEletivas) {
                 dadosListaDisciplinas: infoListaDisciplinas
             }
 
+            const dados4 = {
+                discEletQuarto,
+                discEletQuinto
+            }
+
             // Verifica se tem dados
             if (verificaDados(dados) && verificaDados(dadosDisciplnas)) {
                 const data = JSON.stringify(dados, null, 2)
                 const data2 = JSON.stringify(dadosDisciplnas, null, 2)
                 const data3 = JSON.stringify(dados3, null, 2)
+                const data4 = JSON.stringify(dados4, null, 2)
 
                 fs.writeFile('./dados/dados.json', data, (err) => {
                     if (err) throw err
@@ -286,6 +290,11 @@ function lerPDF(arquivo, disciplinasEletivas) {
                 })
 
                 fs.writeFile('./dados/dadosGerais.json', data3, (err) => {
+                    if (err) throw err
+                    console.log('The file has been saved!')
+                })
+
+                fs.writeFile('./dados/dadosEletivas.json', data4, (err) => {
                     if (err) throw err
                     console.log('The file has been saved!')
                 })
@@ -305,6 +314,5 @@ module.exports = {
     lerPDF,
     verificaFimSemestre,
     verificaDados,
-    resetaVar,
-    verificaEletiva
+    resetaVar
 }

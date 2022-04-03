@@ -186,8 +186,9 @@ router.get('/dashboard', (req, res) => {
         const json = require('./../dados/dados')
         const json2 = require('./../dados/dadosDisciplinas')
         const json3 = require('./../dados/dadosGerais')
+        const json4 = require('./../dados/dadosEletivas')
 
-        res.render('dashboard', { json, json2, json3 })
+        res.render('dashboard', { json, json2, json3, json4 })
     }, 800)
 
     /*setTimeout(() => {
