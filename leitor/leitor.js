@@ -1,7 +1,7 @@
 const fs = require('fs')
 const PDFParser = require('pdf2json')
 
-let countAprovado = 0 // Conta as disciplinas aprovadas
+let discAprovadas = 0 // Conta as disciplinas aprovadas
 let cont = 0 // Auxiliador para contar as disciplinas dos semestres
 let listaDisciplinas = [] // Lista com as disciplinas por semestre
 
@@ -35,8 +35,8 @@ let horasAprovadas = 0
 let horasRestantes = 0
 let progresso = 0
 // Conta as disciplinas eletivas aprovadas
-let discEletQuarto = 4
-let discEletQuinto = 3
+//let discEletQuarto = 4
+//let discEletQuinto = 3
 
 function adicionaDiscente(linha) {
     if (contAux === 3 || contAux === 4 || contAux === 7 || contAux === 11 || contAux === 12 || contAux === 21) {
@@ -71,6 +71,8 @@ function verificaDados(dados) {
 }
 
 function verificaEletiva(listaDisciplinas, disciplinasEletivas) {
+    let discEletQuarto = 4
+    let discEletQuinto = 3
     for (let i = 0; i < listaDisciplinas.length; i++) {
         for (let j = 0; j < disciplinasEletivas.length; j++) {
             if (listaDisciplinas[i][3] == disciplinasEletivas[j].codigo && (listaDisciplinas[i][2] == "APROVADO" || listaDisciplinas[i][2] == "APROVADO MÉDIA")) {
@@ -84,6 +86,7 @@ function verificaEletiva(listaDisciplinas, disciplinasEletivas) {
             }
         }
     }
+    return {discEletQuarto, discEletQuinto}
 }    
 
 
@@ -123,7 +126,7 @@ function criaJsonDisciplina() {
 }
 
 function resetaVar() {
-    countAprovado = 0
+    discAprovadas = 0
     cont = 0
     listaDisciplinas = []
 
@@ -207,7 +210,7 @@ function lerPDF(arquivo, disciplinasEletivas) {
                             } else if (!primeiro && checaDisciplina && contAuxDisciplina + 3 === contAux) {
                                 // ^Verifica se foi aprovado na disciplina e aumenta o contador, ou só adiciona o status
                                 if (decodeURIComponent(t.T) === 'APROVADO' || decodeURIComponent(t.T) === 'APROVADO MÉDIA') {
-                                    countAprovado += 1
+                                    discAprovadas += 1
                                     cont += 1
                                 }
                                 infoDisciplinas.push(decodeURIComponent(t.T))
@@ -240,19 +243,19 @@ function lerPDF(arquivo, disciplinasEletivas) {
                 })
             })
 
-            discRestantes = 41 - countAprovado
-            horasAprovadas = countAprovado * 64 + 64 + 192
+            discRestantes = 41 - discAprovadas
+            horasAprovadas = discAprovadas * 64 + 64 + 192
             horasRestantes = discRestantes * 64
             progresso = parseInt((horasAprovadas / 2880) * 100, 10)
 
-            verificaEletiva(infoListaDisciplinas, disciplinasEletivas)
-            console.log(discEletQuarto,"     ", discEletQuinto)
+            let {discEletQuarto, discEletQuinto} = verificaEletiva(infoListaDisciplinas, disciplinasEletivas)
+            console.log(discEletQuarto, discEletQuinto)
 
             const dadosDisciplnas = criaJsonDisciplina()
 
             const dados = {
                 listaDisciplinas,
-                discAprovadas: countAprovado,
+                discAprovadas,
                 discRestantes,
                 horasAprovadas,
                 horasRestantes,
@@ -287,7 +290,7 @@ function lerPDF(arquivo, disciplinasEletivas) {
                     console.log('The file has been saved!')
                 })
 
-                resetaVar()
+                //resetaVar()
             }
             fs.unlinkSync(pdfCaminho)
         })

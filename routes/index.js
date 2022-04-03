@@ -188,7 +188,7 @@ router.get('/dashboard', (req, res) => {
         const json3 = require('./../dados/dadosGerais')
 
         res.render('dashboard', { json, json2, json3 })
-    }, 2000)
+    }, 800)
 
     /*setTimeout(() => {
         fs.unlink('./dados/dados.json', (err) => {
