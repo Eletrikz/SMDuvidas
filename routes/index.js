@@ -3,7 +3,7 @@ const path = require('path')
 const fs = require('fs')
 const router = express.Router()
 
-const Disciplinas = require('./../database/Disciplinas')
+// const Disciplinas = require('./../database/Disciplinas')
 
 const multer = require('multer')
 const storage = multer.diskStorage({
@@ -18,6 +18,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage })
 
 const leitor = require('./../leitor/leitor')
+const db = require('./../database/dbEstrutura.json')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -31,14 +32,7 @@ router.get('/escolhaProgresso', function(req, res) {
 
 /* GET progresso manual page. */
 router.get('/progressoManual', function(req, res) {
-    Disciplinas.findAll({
-        raw: true,
-        order: [
-            ['codigo', 'ASC']
-        ]
-    }).then(disciplinas => {
-        res.render('progressoManual', { disciplinas: disciplinas })
-    })
+    res.render('progressoManual', { disciplinas: db })
 })
 
 /* POST upload manual page. */
@@ -126,8 +120,9 @@ router.post('/upload/uploadManual', (req, res) => {
         horasRestantes: horasRestantes,
         progresso: progresso
     }
-    const dados2 = null, dados3 = null
-    
+    const dados2 = null
+    const dados3 = null
+
     const data = JSON.stringify(dados, null, 2)
     const data2 = JSON.stringify(dados2, null, 2)
     const data3 = JSON.stringify(dados3, null, 2)
@@ -163,7 +158,6 @@ router.post('/upload/upload', upload.single('file'), function(req, res) {
         })
         res.send('Formato do arquivo não suportado')
     } else {
-        const db = require('./../database/dbEstrutura.json')
         leitor.lerPDF(req.file.path, db)
         res.redirect('/dashboard')
     }
@@ -201,7 +195,7 @@ router.get('/dashboard', (req, res) => {
             if (err) throw err
             console.log('json was deleted')
         })
-    }, 1000) 
+    }, 1000)
 })
 
 router.get('/atividadesComplementares', (req, res) => {

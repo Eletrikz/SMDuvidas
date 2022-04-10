@@ -9,13 +9,13 @@ const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')
 
 // Database
-const connection = require('./database/database')
+/*const connection = require('./database/database')
 connection.authenticate()
     .then(() => {})
     .catch((err) => {
         console.log(err)
     })
-
+*/
 // Express
 const app = express()
 
