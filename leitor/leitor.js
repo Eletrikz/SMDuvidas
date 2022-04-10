@@ -73,14 +73,22 @@ function verificaDados(dados) {
 function verificaEletiva(listaDisciplinas, disciplinasEletivas) {
     let discEletQuarto = 4
     let discEletQuinto = 3
+
+    // No json, passa todas as disciplinas, estamos recuperando apenas as eletivas
+    let eletivas = []
+    for (let i = 0; i < disciplinasEletivas.length; i++) {
+        if (disciplinasEletivas[i].tipo == 3) {
+            eletivas.push(disciplinasEletivas[i])
+        }
+    }
+
     for (let i = 0; i < listaDisciplinas.length; i++) {
-        for (let j = 0; j < disciplinasEletivas.length; j++) {
-            if (listaDisciplinas[i][3] == disciplinasEletivas[j].codigo && (listaDisciplinas[i][2] == "APROVADO" || listaDisciplinas[i][2] == "APROVADO MÉDIA")) {
-                //console.log(disciplinasEletivas[j].codigo, "   ", listaDisciplinas[i][3])
-                if (disciplinasEletivas[j].semestre == 4 && discEletQuarto > 0) {
+        for (let j = 0; j < eletivas.length; j++) {
+            if (listaDisciplinas[i][3] == eletivas[j].codigo && (listaDisciplinas[i][2] == "APROVADO" || listaDisciplinas[i][2] == "APROVADO MÉDIA")) {
+                if (eletivas[j].semestre == 4 && discEletQuarto > 0) {
                     discEletQuarto--
                 }
-                else if (disciplinasEletivas[j].semestre == 5 && discEletQuinto > 0) {
+                else if (eletivas[j].semestre == 5 && discEletQuinto > 0) {
                     discEletQuinto--
                 }
             }

@@ -1,0 +1,1055 @@
+[
+  {
+    "codigo": "ED0115",
+    "nome": "ADMINISTRAÇÃO MERCADOLÓGICA I",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "HLL0077",
+    "nome": "LÍNGUA BRASILEIRA DE SINAIS - LIBRAS",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "PRG0002",
+    "nome": "RELAÇÕES ÉTNICO-RACIAIS E AFRICANIDADES",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "PRG0003",
+    "nome": "EDUCAÇÃO AMBIENTAL",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "PRG0004",
+    "nome": "EDUCAÇÃO EM DIREITOS HUMANOS",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "PRG0005",
+    "nome": "DIFERENÇA E ENFRENTAMENTO PROFISSIONAL NAS DESIGUALDADES SOCIAIS",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "RM0964",
+    "nome": "RENDERIZAÇÃO EM TEMPO REAL",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0006",
+    "nome": "SOCIEDADE, CULTURA E TECNOLOGIA",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0008",
+    "nome": "EDUCAÇÃO, COGNIÇÃO E TECNOLOGIAS DIGITAIS",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0013",
+    "nome": "FUNDAMENTOS DE MATERIAL DIDÁTICO PARA ED À DISTÂNCIA",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0015",
+    "nome": "DESIGN DE INTERFACES GRÁFICAS",
+    "area": 2,
+    "tipo": 1,
+    "semestre": 3,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0016",
+    "nome": "LINGUAGEM AUDIOVISUAL",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0017",
+    "nome": "PROGRAMAÇÃO ORIENTADA A OBJETOS",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0019",
+    "nome": "MITOS E ARQUÉTIPOS",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0020",
+    "nome": "PROTOTIPAÇÃO DE JOGOS TRIDIMENSIONAIS",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0021",
+    "nome": "GESTÃO DE NEGÓCIOS EM MULTIMÍDIA",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0023",
+    "nome": "DESIGN DE JOGOS DIGITAIS",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0024",
+    "nome": "DESIGN INSTRUCIONAL",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0025",
+    "nome": "ÉTICA E POLÍTICA AUTORAL",
+    "area": 4,
+    "tipo": 1,
+    "semestre": 6,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0027",
+    "nome": "EDIÇÃO AUDIOVISUAL",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0028",
+    "nome": "LABORATÓRIO DE PROGRAMAÇÃO",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:11:19.000Z",
+    "updatedAt": "2021-09-20T16:11:19.000Z"
+  },
+  {
+    "codigo": "SMD0029",
+    "nome": "AMBIENTES VIRTUAIS DE APRENDIZAGEM",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:11:19.000Z",
+    "updatedAt": "2021-09-20T16:11:19.000Z"
+  },
+  {
+    "codigo": "SMD0030",
+    "nome": "ANÁLISE E PROJETO DE SISTEMAS",
+    "area": 1,
+    "tipo": 3,
+    "semestre": 4,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0031",
+    "nome": "COMUNICAÇÃO EM NOVAS MÍDIAS",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0032",
+    "nome": "DESIGN DE SOM",
+    "area": 3,
+    "tipo": 3,
+    "semestre": 5,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0033",
+    "nome": "ESTRUTURA DE DADOS",
+    "area": 1,
+    "tipo": 3,
+    "semestre": 4,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0034",
+    "nome": "FERRAMENTAS DE MODELAGEM TRIDIMENSIONAL I",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0035",
+    "nome": "ÁMATEMÁTICA E FÍSICA PARA JOGOS",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:11:19.000Z",
+    "updatedAt": "2021-09-20T16:11:19.000Z"
+  },
+  {
+    "codigo": "SMD0036",
+    "nome": "PRODUÇÃO AUDIOVISUAL",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0037",
+    "nome": "REDES DE COMPUTADORES",
+    "area": 1,
+    "tipo": 3,
+    "semestre": 4,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0038",
+    "nome": "ÁLGEBRA COMPUTACIONAL PARA PROGRAMAÇÃO",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:11:19.000Z",
+    "updatedAt": "2021-09-20T16:11:19.000Z"
+  },
+  {
+    "codigo": "SMD0039",
+    "nome": "CULTURA DE JOGOS",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0040",
+    "nome": "EXPERIMENTOS EM MULTIMÍDIA I",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0042",
+    "nome": "GERÊNCIA DE PROJETOS DE SOFTWARE",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0044",
+    "nome": "INTRODUÇÃO À COMPUTAÇÃO MÓVEL E UBÍQUA",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:11:19.000Z",
+    "updatedAt": "2021-09-20T16:11:19.000Z"
+  },
+  {
+    "codigo": "SMD0045",
+    "nome": "LINGUAGEM DE PROGRAMAÇÃO SCRIPT",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:11:19.000Z",
+    "updatedAt": "2021-09-20T16:11:19.000Z"
+  },
+  {
+    "codigo": "SMD0046",
+    "nome": "MITOLOGIAS UNIVERSAIS",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0047",
+    "nome": "PROCESSAMENTO DIGITAL DE ÁUDIO",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0048",
+    "nome": "TESTE DE SOFTWARE APLICADO",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:11:19.000Z",
+    "updatedAt": "2021-09-20T16:11:19.000Z"
+  },
+  {
+    "codigo": "SMD0049",
+    "nome": "TÉCNICAS DE ANIMAÇÃO ANALÓGICA",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0050",
+    "nome": "SISTEMAS DISTRIBUÍDOS",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:11:19.000Z",
+    "updatedAt": "2021-09-20T16:11:19.000Z"
+  },
+  {
+    "codigo": "SMD0051",
+    "nome": "REDAÇÃO PARA MÍDIAS DIGITAIS",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0052",
+    "nome": "PROGRAMAÇÃO PARA WEB I",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:11:19.000Z",
+    "updatedAt": "2021-09-20T16:11:19.000Z"
+  },
+  {
+    "codigo": "SMD0053",
+    "nome": "PROGRAMAÇÃO PARA JOGOS I",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:11:19.000Z",
+    "updatedAt": "2021-09-20T16:11:19.000Z"
+  },
+  {
+    "codigo": "SMD0054",
+    "nome": "INTELIGÊNCIA COMPUTACIONAL APLICADA A JOGOS I",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0055",
+    "nome": "ENGENHARIA DE SOFTWARE",
+    "area": 1,
+    "tipo": 3,
+    "semestre": 5,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0056",
+    "nome": "DIREÇÃO DE ARTE PARA MULTIMÍDIA",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0057",
+    "nome": "CONCEPÇÃO DE CENÁRIOS E DE PERSONAGENS",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0058",
+    "nome": "BANCO DE DADOS APLICADO À MULTIMÍDIA",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0059",
+    "nome": "MÍDIAS DIGITAIS E MATEMÁTICA",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0061",
+    "nome": "PROGRAMAÇÃO PARA JOGOS II",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:11:19.000Z",
+    "updatedAt": "2021-09-20T16:11:19.000Z"
+  },
+  {
+    "codigo": "SMD0065",
+    "nome": "DESENVOLVIMENTO DE APLICAÇÕES DISTRIBUÍDAS",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0066",
+    "nome": "AUTORAÇÃO DE MÍDIA DE ARMAZENAMENTO LOCAL",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0069",
+    "nome": "PROGRAMAÇÃO PARA WEB II",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:11:19.000Z",
+    "updatedAt": "2021-09-20T16:11:19.000Z"
+  },
+  {
+    "codigo": "SMD0070",
+    "nome": "SISTEMAS EMBARCADOS",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0071",
+    "nome": "VIDEOGRAFISMO",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0072",
+    "nome": "TÉCNICAS DE ANIMAÇÃO DIGITAL I",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0073",
+    "nome": "JOGOS MULTIPLATAFORMA",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0074",
+    "nome": "JOGOS DISTRIBUÍDOS",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0075",
+    "nome": "DESENVOLVIMENTO DE MATERIAL DIDÁTICO EXPERIMENTAL E TREINAMENTO DE HABILIDADES",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0076",
+    "nome": "CIBERCULTURA E EDUCAÇÃO: NOVAS PRÁTICAS",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0077",
+    "nome": "TRABALHO DE CONCLUSÃO DE CURSO",
+    "area": 4,
+    "tipo": 1,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0078",
+    "nome": "DESENVOLVIMENTO DE JOGOS CASUAIS",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0079",
+    "nome": "DESENVOLVIMENTO DE MOTORES GRÁFICOS",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0080",
+    "nome": "COMPUTAÇÃO GRÁFICA",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0081",
+    "nome": "INTELIGÊNCIA COMPUTACIONAL APLICADA A JOGOS II",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0082",
+    "nome": "JOGOS PARA CONSOLE",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0083",
+    "nome": "EDUCOMUNICAÇÃO",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0084",
+    "nome": "EXPERIMENTOS EM TIPOGRAFIA DIGITAL",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0085",
+    "nome": "FRAMEWORKS DE SOFTWARE",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0086",
+    "nome": "FOTOGRAFIA DIGITAL",
+    "area": 3,
+    "tipo": 3,
+    "semestre": 4,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0087",
+    "nome": "FILOSOFIA DA TECNOLOGIA",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0088",
+    "nome": "AUTORAÇÃO MULTIMÍDIA I",
+    "area": 2,
+    "tipo": 1,
+    "semestre": 1,
+    "createdAt": "2021-09-20T16:15:45.000Z",
+    "updatedAt": "2021-09-20T16:15:45.000Z"
+  },
+  {
+    "codigo": "SMD0089",
+    "nome": "DESENHO I",
+    "area": 4,
+    "tipo": 1,
+    "semestre": 1,
+    "createdAt": "2021-09-20T16:15:02.000Z",
+    "updatedAt": "2021-09-20T16:15:02.000Z"
+  },
+  {
+    "codigo": "SMD0090",
+    "nome": "SEMIÓTICA APLICADA",
+    "area": 2,
+    "tipo": 3,
+    "semestre": 4,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0091",
+    "nome": "HISTÓRIA DO DESIGN",
+    "area": 2,
+    "tipo": 1,
+    "semestre": 1,
+    "createdAt": "2021-09-20T16:15:02.000Z",
+    "updatedAt": "2021-09-20T16:15:02.000Z"
+  },
+  {
+    "codigo": "SMD0092",
+    "nome": "PROJETO INTEGRADO I",
+    "area": 4,
+    "tipo": 1,
+    "semestre": 3,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0093",
+    "nome": "NARRATIVAS MULTIMÍDIA",
+    "area": 3,
+    "tipo": 1,
+    "semestre": 2,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0094",
+    "nome": "INTRODUÇÃO A SISTEMAS E MÍDIAS DIGITAIS",
+    "area": 4,
+    "tipo": 1,
+    "semestre": 1,
+    "createdAt": "2021-09-20T16:15:45.000Z",
+    "updatedAt": "2021-09-20T16:15:45.000Z"
+  },
+  {
+    "codigo": "SMD0095",
+    "nome": "PROGRAMAÇÃO I",
+    "area": 1,
+    "tipo": 1,
+    "semestre": 1,
+    "createdAt": "2021-09-20T16:15:02.000Z",
+    "updatedAt": "2021-09-20T16:15:02.000Z"
+  },
+  {
+    "codigo": "SMD0096",
+    "nome": "PROGRAMAÇÃO II",
+    "area": 1,
+    "tipo": 1,
+    "semestre": 2,
+    "createdAt": "2021-09-20T16:15:02.000Z",
+    "updatedAt": "2021-09-20T16:15:02.000Z"
+  },
+  {
+    "codigo": "SMD0097",
+    "nome": "AUTORAÇÃO MULTIMÍDIA II",
+    "area": 2,
+    "tipo": 1,
+    "semestre": 3,
+    "createdAt": "2021-09-20T16:15:45.000Z",
+    "updatedAt": "2021-09-20T16:15:45.000Z"
+  },
+  {
+    "codigo": "SMD0098",
+    "nome": "DESENHO II",
+    "area": 4,
+    "tipo": 3,
+    "semestre": 4,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0099",
+    "nome": "BANCO DE DADOS I",
+    "area": 1,
+    "tipo": 3,
+    "semestre": 5,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0100",
+    "nome": "GESTÃO DE PROJETOS MULTIMÍDIA",
+    "area": 4,
+    "tipo": 1,
+    "semestre": 6,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0101",
+    "nome": "PROJETO INTEGRADO II",
+    "area": 4,
+    "tipo": 1,
+    "semestre": 7,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0102",
+    "nome": "METODOLOGIA DE PESQUISA CIENTÍFICA",
+    "area": 4,
+    "tipo": 1,
+    "semestre": 4,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0103",
+    "nome": "SEMINÁRIOS EM MULTIMÍDIA",
+    "area": 4,
+    "tipo": 1,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0105",
+    "nome": "COMUNICAÇÃO VISUAL I",
+    "area": 2,
+    "tipo": 1,
+    "semestre": 2,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0106",
+    "nome": "MATEMÁTICA APLICADA À MULTIMÍDIA I",
+    "area": 1,
+    "tipo": 1,
+    "semestre": 2,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0107",
+    "nome": "COGNIÇÃO E TECNOLOGIAS DIGITAIS",
+    "area": 4,
+    "tipo": 1,
+    "semestre": 2,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0108",
+    "nome": "INTERAÇÃO HUMANO-COMPUTADOR I",
+    "area": 2,
+    "tipo": 1,
+    "semestre": 3,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0109",
+    "nome": "INTRODUÇÃO À CIBERCULTURA",
+    "area": 4,
+    "tipo": 1,
+    "semestre": 3,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0110",
+    "nome": "COMUNICAÇÃO VISUAL II",
+    "area": 2,
+    "tipo": 3,
+    "semestre": 5,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0111",
+    "nome": "PROJETO DE TRABALHO FINAL",
+    "area": 4,
+    "tipo": 1,
+    "semestre": 7,
+    "createdAt": "2021-09-20T16:13:40.000Z",
+    "updatedAt": "2021-09-20T16:13:40.000Z"
+  },
+  {
+    "codigo": "SMD0112",
+    "nome": "INSTALAÇÕES MULTIMÍDIA",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0113",
+    "nome": "LABORATÓRIO DE CRIATIVIDADE",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0114",
+    "nome": "COMPUTAÇÃO FÍSICA",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0115",
+    "nome": "MÉTODOS E TÉCNICAS NA PESQUISA TRANSDISCIPLINAR",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0116",
+    "nome": "TECNODOCÊNCIA E ANIMAÇÃO",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0117",
+    "nome": "INTERAÇÃO HUMANO-COMPUTADOR II",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0118",
+    "nome": "TEORIA E CRÍTICA DO DESIGN",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0119",
+    "nome": "TÓPICOS AVANÇADOS EM DESIGN DE INTERFACES GRÁFICAS",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0120",
+    "nome": "IDENTIDADE SONORA DE MARCAS",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0121",
+    "nome": "ANÁLISE DE DESEMPENHO",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0122",
+    "nome": "PROGRAMAÇÃO PARA DISPOSITIVOS MÓVEIS",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0123",
+    "nome": "COMPUTAÇÃO MÓVEL E UBÍQUA",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  },
+  {
+    "codigo": "SMD0124",
+    "nome": "PRODUÇÃO AUDIOVISUAL PARA CRIANÇAS E ADOLESCENTES",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0125",
+    "nome": "PROJETOS PARA EDUCAÇÃO ONLINE",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0126",
+    "nome": "TÉCNICAS DE ANIMAÇÃO 3D II",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0127",
+    "nome": "DESIGN DE IDENTIDADE DE MARCA",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0128",
+    "nome": "TÉCNICAS DE ANIMAÇÃO 3D I",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0129",
+    "nome": "TÉCNICAS DE ANIMAÇÃO 2D",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0130",
+    "nome": "DESIGN EMOCIONAL",
+    "area": 2,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0131",
+    "nome": "FERRAMENTAS DE MODELAGEM TRIDIMENSIONAL II",
+    "area": 3,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:01:31.000Z",
+    "updatedAt": "2021-09-20T00:01:31.000Z"
+  },
+  {
+    "codigo": "SMD0132",
+    "nome": "INTRODUÇÃO À TUTORIA PARA EDUCAÇÃO ONLINE",
+    "area": 4,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T00:00:40.000Z",
+    "updatedAt": "2021-09-20T00:00:40.000Z"
+  },
+  {
+    "codigo": "SMD0133",
+    "nome": "LABORATÓRIO DE COMPUTAÇÃO GRÁFICA",
+    "area": 1,
+    "tipo": 2,
+    "semestre": 8,
+    "createdAt": "2021-09-20T16:08:06.000Z",
+    "updatedAt": "2021-09-20T16:08:06.000Z"
+  }
+]
